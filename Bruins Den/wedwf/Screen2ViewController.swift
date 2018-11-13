@@ -19,7 +19,7 @@ class Screen2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TopNavBarBackground2"), for: .default)
-        cells += [MenuButton("Powerschool", #imageLiteral(resourceName: "powerschool")), MenuButton("Union Street Journal", #imageLiteral(resourceName: "unionstreet")), MenuButton("Senate Voting", #imageLiteral(resourceName: "senate"))]
+        cells += [MenuButton("PowerSchool", #imageLiteral(resourceName: "powerschool")), MenuButton("Union Street Journal", #imageLiteral(resourceName: "unionstreet")), MenuButton("Senate Voting", #imageLiteral(resourceName: "senate"))]
         
         
         collectionView.dataSource = self

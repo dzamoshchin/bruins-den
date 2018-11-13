@@ -12,7 +12,6 @@ var facultyLoaded = 0
 //Handles the Main Menu of the app
 class ViewController: UIViewController {
 
-    @IBOutlet weak var test: UILabel!
     @IBOutlet weak var scrollView: UIScrollView! //FOR TOP SCROLLING PICS
     
     var timer : Timer!
@@ -47,9 +46,9 @@ class ViewController: UIViewController {
                 UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             }
         }
-        //ADD CARE LINE
-        let careAction = UIAlertAction(title: "Care Line", style: UIAlertActionStyle.default) { (action) in
-            if let url = NSURL(string: "tel://7205542273"), UIApplication.shared.canOpenURL(url as URL) {
+        //ADD SAFE2TELL
+        let careAction = UIAlertAction(title: "Safe2Tell", style: UIAlertActionStyle.default) { (action) in
+            if let url = NSURL(string: "tel://18775427233"), UIApplication.shared.canOpenURL(url as URL) {
                 UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             }
         }
@@ -123,6 +122,7 @@ class ViewController: UIViewController {
             self.scrollView.isPagingEnabled = true
             let subview = UIImageView(frame: frame)
             subview.image = pictures[index]
+            subview.contentMode = .scaleAspectFill
             imageViews.append(subview)
             
             self.scrollView.addSubview(subview)
@@ -191,7 +191,6 @@ class ViewController: UIViewController {
         //label.addSubview(test)
         //
         //self.navigationController?.navigationBar.addSubview(label)
-        
         
         print(self.navigationItem.titleView?.frame.size.height)
         

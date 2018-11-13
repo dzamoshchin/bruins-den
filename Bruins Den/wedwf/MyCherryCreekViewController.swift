@@ -22,7 +22,7 @@ class MyCherryCreekViewController: UIViewController {
         
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
-        self.title = "MyCherryCreek"
+        self.title = "myCherryCreek"
         webView.loadRequest(NSURLRequest(url: NSURL(string: "https://my.cherrycreekschools.org/LoginPolicy.jsp")! as URL) as URLRequest)
         
 

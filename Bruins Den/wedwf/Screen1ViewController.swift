@@ -25,7 +25,7 @@ class Screen1ViewController: UIViewController {
         self.navigationController?.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
         
-        cells += [MenuButton("Announcements", #imageLiteral(resourceName: "announcements")), MenuButton("MyCherryCreek", #imageLiteral(resourceName: "mycherry")), MenuButton("Faculty/Staff", #imageLiteral(resourceName: "faculty")), MenuButton("Bell Schedule", #imageLiteral(resourceName: "bell")), MenuButton("Athletics", #imageLiteral(resourceName: "athletic")), MenuButton("Clubs", #imageLiteral(resourceName: "clubs"))]
+        cells += [MenuButton("Announcements", #imageLiteral(resourceName: "announcements")), MenuButton("myCherryCreek", #imageLiteral(resourceName: "mycherry")), MenuButton("Faculty/Staff", #imageLiteral(resourceName: "faculty")), MenuButton("Bell Schedule", #imageLiteral(resourceName: "bell")), MenuButton("Athletics", #imageLiteral(resourceName: "athletic")), MenuButton("Clubs", #imageLiteral(resourceName: "clubs"))]
         
         collectionView.dataSource = self
         collectionView.delegate = self

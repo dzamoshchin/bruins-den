@@ -422,6 +422,7 @@
 				TargetAttributes = {
 					47CC4EA31EBAA29100510F77 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 73EF97Y9Y2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -745,9 +746,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Bruins Den.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 73EF97Y9Y2;
 				INFOPLIST_FILE = wedwf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XC.com.cherrycreek.cherrycreekapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -767,9 +768,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Bruins Den.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 73EF97Y9Y2;
 				INFOPLIST_FILE = wedwf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XC.com.cherrycreek.cherrycreekapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
-class PowerschoolViewController: UIViewController {
+class PowerschoolViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TopNavBarBackground2"), for: .default)
@@ -18,11 +20,15 @@ class PowerschoolViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
-        self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
+        webView.navigationDelegate = self
+ self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.title = "PowerSchool"
-        webView.loadRequest(NSURLRequest(url: NSURL(string: "https://swpowerschool.cherrycreekschools.org/public/home.html?portal=y")! as URL) as URLRequest)
+        
+        let url = URL(string: "https://powerschool.cherrycreekschools.org/public/")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
         
         // Do any additional setup after loading the view.
     }
