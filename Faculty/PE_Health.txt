@@ -1,0 +1,27 @@
+Term	TEACHER	PERIOD 1	PERIOD 2	PERIOD 3	PERIOD 4	PERIOD 5	PERIOD 6	PERIOD 7	PERIOD 8
+		8:20-9:12 (52)	9:19-10:06 (47)	10:13-11:00 (47)	11:07-11:54 (47)	12:01-12:48 (47)	12:55-1:42 (47)	1:49-2:36 (47)	2:43-3:30 (47)
+1	Sally Moos	Coordinator	Team Sports	Team Sports			Individual Sports		Individual Sports
+2	W84A	Coordinator	Team Sports	Team Sports			Individual Sports	Individual Sports	
+1	Det Betti	Advance Fitness		Weight Training 1	Advance Fitness	 	Advance Fitness	Advance Fitness	 
+2	W88B	Advance Fitness	 		Advance Fitness		Advance Fitness	Weight Training I	Weight Training 1
+1	Mike Carroll	Health (W203)	Health (W203)		Health (W203)	Health (W203)			Health (W203)
+2	W201A	Health (W203)	Health (W203)			Health (W203)		Health (W203)	Health (W203)
+1	Greg Critchett	Tech	Tech	 		Personal Fitness		Peer Mentor PE	Personal Fitness
+2	W504A	Tech	Tech			Personal Fitness		Peer Mentor PE	Personal Fitness
+1	Pat DeBello		Individual Sports	Individual Sports		Weight Training 1		Team Sports	Concussions
+2	W85A	Team Sports	Individual Sports	Individual Sports		Weight Training 1		Team Sports	 
+1	Mike Goeglein	Adventure Set-Up		 	Adventure Ed 1		Adventure Ed 1	Adventure Ed 1	Adv Ldr Training
+2	W87A	Adventure Set-Up		 	Adventure Ed 1		Adventure Ed 1	Adventure Ed 1	Adv Ldr Training
+1	Mark Goldsberry	SES	Health (W201)	Health (W201)			Health (W201)		
+2	W88C	SES		Health (W201)	Health (W201)		Health (W201)		
+1	Sarah LaGrange		 	Dance 2	Dance 1 	Dance 1			
+2	W86C		 	Dance 1	Dance 1 	Dance 2			
+1	Holly Lane	Team Sports	Aerobics		Individual Sports			Individual Sports	Team Sports
+2	W80A	Aerobics	Aerobics		 	Individual Sports	Swim Fitness		Individual Sport
+1	Mike Luhring	Individual Sports	Weight Training 1			Team Sports	Team Sports		Weight Training 1
+2	W514	Individual Sports	Weight Training 1	Weight Training 2		Team Sports	Team Sports		
+1	Allison McKean			Health (W203)	Team Sports		Dance 1	Health (W203)	
+2	W201A			Health (W203)	Team Sports		Health (W203)		Team Sports
+1	Theresa Morris		Adv Outdoor Ed	Adv Outdoor Ed	 	Adventure Ed I		Ultimate Fitness	Adventure Water
+2	W84B		Adv Outdoor Ed	Adv Outdoor Ed	 	Adventure Ed I		Adventure Water	Adventure Water
+									

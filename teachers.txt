@@ -1,0 +1,14 @@
+/* 
+    FORMATTING:
+    username, first_name, last_name, office, phone, schedule
+
+    EXAMPLE:
+    mclough, Matthew, Clough, N100, 41234, |per1|per2|per3|per4|per5|per6|per7|per8
+
+    PERIOD EXAMPLE:
+    class_name - room_number
+    AP US History - E 100
+
+    off-periods are a space (no text)
+ */
+
