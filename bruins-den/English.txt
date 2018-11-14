@@ -1,0 +1,32 @@
+*sfeld, Samuel, Feld, E307, 42332, | |AP Lit - E 305|AP Lit - E 305|ASC - E 301|ASC - E 200|ASC - E 207| | 
+yabrahamsson, Yael, Abrahamsson, 800ALibrary, 42230, |AP Lit - IC 746|English 10H - IC 746| |AP Lit - IC 746| |English 10 H - IC 746|English 10H - IC 746| 
+mbenham, Marti, Benham, FA625, 42216, |Adv. Deb. Ext - FA 625|Adv Deb LDF - FA 625|AdvDebOO - FA 625|Adv. Deb. PF - FA 625| | | |CX Debate - FA 625
+ecave, Emily, Cave, FA621A, 42523, | |CP English 11 - E 303| |CP English 11 - IC 736|Beg. Debate - FA 624| |CP English 9 - E 404|CP English 9 - E 404
+mchapman, Mary Beth, Chapman, E204A, 42525, |CP English 11 - E 207| | |English 10 H - E 207|English 10H - E 207| |SciFi / SciFi - E 207|English 10H - E 207
+screcelius, Stefani, Crecelius, IC714A, 42190, |CP English 10 - IC 736| |CP English 10 - IC 743| |Engish 10 H - IC 743|English 10H - IC 737|CP English 10 - IC 737| 
+mdoyle, Mhari, Doyle, E202A, 42120, |AP Lang - E 202|CP English 9 - E 202| |AP Lang - E 202| |CP English 9 - E 202| |Shakes / Shakes - E 202
+aeichorn, Andy, Eichorn, E202A, 42163, |Senior Seminar - E 300|Senior Seminar - E 300| |English  9H - E 300| |CP English 11 - E 300|English 9H - E 300| 
+jfoster, Jason, Foster, E404A, 42437, |Intro ColLit / SciFi - E 400|English 10H - E 400|SciFi / SciFi - E 400| |English  10H - E 400| |English 10H - E 400| 
+kgilbert, Kim, Gilbert, IC 714A, 42189, | |English 9H - IC 736|AP Lang - IC 736| | |10 Humanities - IC 736|10 Humanities - IC 736|AP Lang - IC 736
+kgunneson, Kate, Gunneson, E204A, 42321, |English 10H - E 303| |English 10H - E 303|Senior Seminar - E 303| | | | 
+mgustafson2, Matt, Gustafson, IC714A, 42529, |Cr.Wrt / Cr.Wrt - IC 743| | |Cr.Writ / Cr. Writ - IC 743| |AP Lang - IC 743|AP Lang - IC 743|English 9H - IC 743
+cholladay, Carlye, Holladay, FA624, 42311, |Beg.Debate - FA 624|Beg.Debate - FA 624|Adv.Debate - FA 624| | |NarrArt / NarrArt - FA 624|NarrArt / NarrArt - FA 624| 
+dhughes7, Debbie, Hughes, E200A, 42431, | |AP Lang - E 207|CP English 11 - E 207|AP Lang - E 209| | | | 
+lhughes6, Loreen, Hughes, E406A, 42218, |CP English 10 - E 302|CP English 10 - E 302| | |CP English 10 - E 302| |CP English 10 - E 302|CP English 11 - E 302
+cjacob, Chris, Jacob, E304A, 42331, |English 10H - E 301|English 10H - E 301|English 10H - E 301| | |AP Lang - E 301|AP Lang - E 301| 
+ekelloggdunlop, Emily, Kellog-Dunlop, E404A, 42314, | |CP English 9 - E 404|CP English 9 - E 404| |CP English 9* - E 404| | | 
+kkort, Kim, Kort, IC 714B, 42470, |WrClinc / RWSuce - IC 739|/ Cont. Authors - IC 739| | |Read 1-2 - IC 739|Read 3-4 - IC 739|Read 1-2 - IC 739| 
+mmazenko, Michael, Mazenko, W543A, 42185, | | |AP Lang - IC 746| | | | | 
+jmorris, Joel, Morris, E202A, 42487, | |English 10H - E 304|CP English 10 - E 302| | |AP Lit - E 303|AP Lit - E 303|CP English 10 - E 303
+ypark6, Yoon, Park, E204A, 42342, | |Humanities 9 - E 320|Humanities 9 - E 320| | |AP Lang - E 305|WrtFilm / MulCul - E 305|AP Lit - E 305
+lphilipps, Lesley, Philipps, E204A, 42489, |CP English 11 - E 203|English 9H - E 203| | |English 9H - E 203|CP English 11 * - E 203|CP English 11 - E 203| 
+vpope, Vernal, Pope, E206A, 42480, |CP English 11 - E 209|CP English 11 - E 209|CP English 11 - E 209| | |AfAmLit / AfAmLit - E 209| |Crt.Wrt / CrtWrt - E 209
+sramsey2, Sarah, Ramsey, E200A, 42518, |AP Art History - E 200|CP English 11 - E 200|CP English 11 - E 200| | |AP Art History - E 200|CP English 11 - E 200| 
+kriegler, Kirsten, Riegler, E206A, 42334, |AP Lang - E 304| |AP Lang - E 304|CP English 9 - E 304| |CP English 9 - E 304| | 
+drowe, David, Rowe, E204A, 42522, |SES - Shillinglaw| |AP Lang - E 205|AP Lang - E 205| |Senior Seminar - E 205|Senior Seminar - E 205| 
+srussell, Susie, Russell, E200A, 42517, |CP English 9 - E 211|CP English 10* - E 211|CP English 10 - E 211| |CP English 10 - E 211| |CP English 9 - E 211| 
+jschneider, Jim, Schneider, E203A, 42521, |English 9H - E 204| |Senior Seminar - E 204|Senior Seminar - E 204| |English 9H - E 204|English 9H - E 204| 
+sshadwell, Stephany, Shadwell, E202A, 42520, |AP Lang - E 406| |English 9H - E 406|Aw.Win / Aw.Win - E 406| |English 9H - E 406|AP Lang - E 406| 
+tswanson, Tim, Swanson, IC714A, 42193, |English 9H - IC 737|WrFilm / ColComp - IC 737| |Col Comp / WrFilm - IC 737|English 9H - IC 737| | |WrFilm  / WrFilm - IC 737
+mvoss6, Marissa, Voss, E304A, 42447, | |CrtWrt / CrtWrt - E 402|CrtWrt / CrtWrt - E 402|CP English 11 - E 402| | | | 
+lwerber, Lisa, Werber, E404A, 42161, | |English 9H - E 204|English 9H - E 202| |English 9H - E 202| | | 

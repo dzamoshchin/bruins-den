@@ -1,0 +1,89 @@
+Teacher 	Term Room #	Period 1	Period 2	Period 3	Period 4	Period 5	Period 6	Period 7	Period 8
+Arenas	S1		CP Spanish 3	CP Spanish 1		CP Spanish 3	CP Spanish 1		
+	Room		733 IC	733 IC		740 IC	740 IC		
+	S2 								
+	Room								
+Bowditch	S1	CP French 4	French 3/4 H			CP French 1		French 3/4 H	CP French 1
+	Room	302 W	302 W			302 W		302 W	302 W
+	S2 								
+	Room								
+Campbell	S1	CP Spanish 4	CP Span Conv/Comp		CP Span Conv/Comp		AP Spanish Lit	CP Spanish 4	
+	Room	303 W	303 W		303 W		303 W	303 W	
+	S2 								
+	Room								
+Casey	S1	CP Spanish 3 	CP Spanish 1	CP Spanish 1		CP Spanish 1			CP Spanish 3
+	Room	216 W	216 W	216 W		212 W 			216 W
+	S2 								
+	Room								
+Cronin	S1	CP French 3	CP French 3	CP French 2			French Lit 6 H	CP French 3	
+	Room	747 IC	747 IC	747 IC			747 IC	747 IC	
+	S2 								
+	Room								
+Curi	S1		CP Spanish 2	CP Spanish 2		CP Spanish 2	CP Spanish 3	CP Spanish 3	
+	Room		212 W	212 W		216 W	216 W	216 W	
+	S2 								
+	Room								
+Daum-Schultz	S1	CP German 2		(intervention)		CP German 1		CP German 1	CP German 2
+	Room	742 IC				742 IC		742 IC	742 IC
+	S2 								
+	Room								
+Good	S1	CP Spanish 2	CP Spanish 4		CP Spanish 4	CP Spanish 2		CP Spanish 2	
+	Room	745 IC	745 IC		745 IC	745 IC		745 IC	
+	S2 								
+	Room								
+Guy	S1	CP Spanish 2			CP Spanish 1	CP Spanish 1		CP Spanish 1	CP Spanish 2
+	Room	733 IC			733 IC	733 IC		733 IC	733 IC
+	S2 								
+	Room								
+Hester	S1	CP Spanish 2		CP Spanish 4	CP Spanish 2		CP Spanish 4		CP Spanish 2
+	Room	734 IC		745 IC	734 IC		745 IC		745 IC
+	S2 								
+	Room								
+Hofmeister	S1		AP Spanish Lang	CP Spanish 3	CP Spanish 3		CP Spanish 3		
+	Room		304 W	304 W	304 W		304 W		
+	S2 								
+	Room								
+"Jones, Jennifer"	S1	Spanish 3/4 H	CP Spanish 2	CP Spanish 2				Spanish 3/4 H	Spanish 3/4 H
+	Room	740 IC	740 IC	740 IC				740 IC	740 IC
+	S2 								
+	Room								
+"Jones, Ted"	S1	CP Spanish 3 	CP Spanish 2	CP Spanish 2			CP Spanish 3	CP Spanish 3	
+	Room	300 W	300 W	300 W			300 W	300 W	
+	S2 								
+	Room								
+Kindick	S1	Latin 3/4 H	CP Latin 2						
+	Room	716 IC	716 IC						
+	S2 								
+	Room								
+Long	S1						CP Spanish 2	CP Spanish 2	CP Spanish 1
+	Room						733 IC	734 IC	734 IC
+	S2 								
+	Room								
+Magerfleisch	S1	CP Spanish 4			AP Spanish Lang		CP Spanish 2	CP Spanish 2	CP Spanish 4
+	Room	212 W			212 W		212 W	212 W	212 W
+	S2 								
+	Room								
+Moreen	S1	CP French 2		AP French	AP French			CP French 2	CP French 2
+	Room	304 W		302 W	302 W			304 W	304 W
+	S2 								
+	Room								
+Mosby	S1		CP Spanish 3	CP Spanish 3		CP Spanish 3	CP Spanish 4		
+	Room		734 IC	734 IC		734 IC	734 IC		
+	S2 								
+	Room								
+Murillo	S1	CP Spanish 1	CP Spanish 1	CP Sp 3 for Native Speakers			AP Spanish Lang	CP Spanish 1	
+	Room	718 IC	718 IC	718 IC			718 IC	718 IC	
+	S2 								
+	Room								
+Rosevear	S1			CP Latin 1			AP Latin	CP Latin 1	
+	Room			716 IC			716 IC	716 IC	
+	S2 								
+	Room								
+Smith	S1		AP German	CP German 1		(German Diploma)	German 3/4 H		
+	Room		742 IC	742 IC		747 IC?	742 IC		
+	S2 								
+	Room								
+Song	S1	CP Chinese 2	AP Chinese		Chinese 3/4 H	CP Chinese 1		CP Chinese 1	
+	Room	301 W	301 W		301 W	301 W		301 W	
+	S2 								
+	Room								

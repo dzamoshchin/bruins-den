@@ -1,0 +1,125 @@
+Teacher		Period 1	Period 2	Period 3	Period 4	Period 5	Period 6	Period 7	Period 8
+Paul Anderson	Sem 1	Statistical Analysis		Statistical Analysis		CP Acc Geo	CP Acc Geo	Statistical Analysis	
+	Room	W433		W433		W433	W433	W433	
+	Sem 2	Statistical Analysis		Statistical Analysis		CP Acc Geo	CP Acc Geo	Statistical Analysis	
+	Room	W433		W433		W433	W433	W433	
+Michelle Barber	Sem 1	Alg 2/Trig H	Alg 2/Trig H	CP Geo 	CP Geo 	CP Geo 	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room	W553	W553	W553	W553	W553	W553	W553	W553
+	Sem 2	Alg 2/Trig H	Alg 2/Trig H	CP Geo 	CP Geo 	CP Geo 	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room	W553	W553	W553	W553	W553	W553	W553	W553
+Michael Berndt	Sem 1	Geometry Honors	Pre Calc Trig	Pre Calc Trig		Geometry Honors			Pre Calc Trig
+	Room	W436	W436	W436		W436			W436
+	Sem 2	Geometry Honors	Pre Calc Trig	Pre Calc Trig		Geometry Honors			Pre Calc Trig
+	Room	W436	W436	W436		W436			W436
+Jill Carlson	Sem 1			Pre Calc Trig	Pre Calc Trig	CP Acc Alg 1		CP Acc Alg 1	CP Acc Alg 1
+	Room			W310	W310	W310		W310	W310
+	Sem 2			Pre Calc Trig	Pre Calc Trig	CP Acc Alg 1		CP Acc Alg 1	CP Acc Alg 1
+	Room			W310	W310	W310		W310	W310
+Chris Carter	Sem 1		CP Acc Alg 2	CP Alg 1	CP Alg 1			Abstract/Linear	CP Acc Alg 2
+	Room		W548	W548	W548			W548	W548
+	Sem 2		CP Acc Alg 2	CP Alg 1	CP Alg 1			Abstract/Linear	CP Acc Alg 2
+	Room		W548	W548	W548			W548	W548
+Mike Degitis	Sem 1	CP Acc Alg 2	Bus Calc	CP Acc Alg 2		CP Alg 1 (T)		CP Alg 1	
+	Room	W547	W547	W547		W547		W547	
+	Sem 2	CP Acc Alg 2	Bus Calc	CP Acc Alg 2		CP Alg 1 (T)		CP Alg 1	
+	Room	W547	W547	W547		W547		W547	
+Kent Dertinger	Sem 1	CP Acc Alg 1	Geometry Honors	Geometry Honors	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room	W310	W310	W307					
+ASC .4	Sem 2	CP Acc Alg 1	Geometry Honors	Geometry Honors	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room								
+Kim Dertinger	Sem 1	x x x x x x x x x x	AP Calc BC	Intergrated Alg/Geo(T)	AP Calc BC	x x x x x x x x x x	Intergrated Alg/Geo(T)	x x x x x x x x x x	x x x x x x x x x x
+	Room		W441	W441	W441		W441		
+	Sem 2	x x x x x x x x x x	AP Calc BC	Intergrated Alg/Geo(T)	AP Calc BC	x x x x x x x x x x	Intergrated Alg/Geo(T)	x x x x x x x x x x	x x x x x x x x x x
+	Room		W441	W441	W441		W441		
+Dara Goeglein	Sem 1	x x x x x x x x x x	x x x x x x x x x x	Pre Calc H	Pre Calc H		CP Acc Geo	CP Acc Geo	x x x x x x x x x x
+	Room			W312	W312		W312	W312	
+	Sem 2	x x x x x x x x x x	x x x x x x x x x x	Pre Calc H	Pre Calc H		CP Acc Geo	CP Acc Geo	x x x x x x x x x x
+	Room			W312	W312		W312	W312	
+Tammy Hamill	Sem 1		College Trig	CP Alg 2	Prob Stat		CP Alg 2	Prob Stat	
+	Room		W540	W540	W540		W540	W540	
+	Sem 2		College Trig	CP Alg 2	Prob Stat		CP Alg 2	Prob Stat	
+	Room		W540	W540	W540		W540	W540	
+Leann Hughes	Sem 1	CP Geo 	Alg 2/Trig H	Alg 2/Trig H			CP Geo 	CP Geo 	
+	Room	W434	W434	W434			W434	W434	
+	Sem 2	CP Geo 	Alg 2/Trig H	Alg 2/Trig H			CP Geo 	CP Geo 	
+	Room	W434	W434	W434			W434	W434	
+Johanna Lewis	Sem 1	CP Alg 1 (T)	CP Alg 1 (T)	Calc 3			CP Alg 1 (T)	Calc 3	
+	Room	W437	W437	W437			W437	W437	
+DATA(.1)	Sem 2	CP Alg 1 (T)	CP Alg 1 (T)	Diff EQ			CP Alg 1 (T)	Diff EQ	
+	Room	W437	W437	W437			W437	W437	
+Nancy Major	Sem 1	AP Calc BC	Pre Calc H						AP Calc BC
+	Room	W312	W312						W312
+TECH .4	Sem 2	AP Calc BC	Pre Calc H						AP Calc BC
+	Room	W312	W312						W312
+Jonathan Mattes-Ritz	Sem 1	College Algebra	CP Acc Alg 2		CP Alg 2		CP Acc Alg 2		CP Alg 2
+	Room	W549	W549		W547		W545		W547
+	Sem 2	College Algebra	CP Acc Alg 2		CP Alg 2		CP Acc Alg 2		CP Alg 2
+	Room	W549	W549		W547		W545		W547
+Delisa McDavid	Sem 1	x x x x x x x x x x	x x x x x x x x x x	CP Acc Geo	CP Acc Geo		Alg 2/Trig H	Alg 2/Trig H	x x x x x x x x x x
+	Room			W549	W549		W549	W549	
+	Sem 2	x x x x x x x x x x	x x x x x x x x x x	CP Acc Geo	CP Acc Geo		Alg 2/Trig H	Alg 2/Trig H	x x x x x x x x x x
+	Room			W549	W549		W549	W549	
+Kathi Meyer	Sem 1	Pre Calc H		CP Acc Geo			Pre Calc H	CP Acc Geo	CP Acc Geo
+	Room	W438		W438			W438	W438	W438
+	Sem 2	Pre Calc H		CP Acc Geo			Pre Calc H	CP Acc Geo	CP Acc Geo
+	Room	W438		W438			W438	W438	W438
+Karl Mimmack	Sem 1	CP Alg 2	CP Alg 2	AP Stat			AP Stat	AP Stat	
+	Room	W435	W435	W435			W435	W435	
+	Sem 2	CP Alg 2	CP Alg 2	AP Stat			AP Stat	AP Stat	
+	Room	W435	W435	W435			W435	W435	
+Jocelyn Nguyen-Reed	Sem 1	AP Comp Sci		AP Comp Sci	AP Comp Sci		Data Structures	Data Structures	
+	Room	W431		W431	W431		W431	W431	
+	Sem 2	AP Comp Sci		AP Comp Sci	AP Comp Sci		iOS App Development	iOS App Development	
+	Room	W431		W431	W431		W431	W431	
+Andie Nye	Sem 1	AP Calc AB	CP Acc Alg 1		CP Acc Alg 1			AP Calc AB	CP Acc Alg 1
+	Room	W542	W542		W542			W542	W542
+	Sem 2	AP Calc AB	CP Acc Alg 1		CP Acc Alg 1			AP Calc AB	CP Acc Alg 1
+	Room	W542	W542		W542			W542	W542
+Kevin Ormsby	Sem 1	CP Acc Geo	CP Acc Geo			CP Acc Geo		Pre Calc H	Pre Calc H
+	Room	W439	W439			W439		W439	W439
+	Sem 2	CP Acc Geo	CP Acc Geo			CP Acc Geo		Pre Calc H	Pre Calc H
+	Room	W439	W439			W439		W439	W439
+Jim Padavic	Sem 1	Pre Calc H	Pre Calc H	CP Acc Alg 2				Geometry Honors	Geometry Honors
+	Room	W544	W544	W544				W544	W544
+	Sem 2	Pre Calc H	Pre Calc H	CP Acc Alg 2				Geometry Honors	Geometry Honors
+	Room	W544	W544	W544				W544	W544
+Kari Peterson	Sem 1	CP Acc Alg 2		CP Acc Geo	CP Acc Alg 2	CP Acc Alg 2			CP Acc Geo
+	Room	W305		W305	W305	W305			W305
+	Sem 2	CP Acc Alg 2		CP Acc Geo	CP Acc Alg 2	CP Acc Alg 2			CP Acc Geo
+	Room	W305		W305	W305	W305			W305
+Jennifer Reichert	Sem 1	Pre Calc Trig	CP Geo (T)	CP Geo (T)			CP Acc Alg 2	CP Acc Alg 2	
+	Room	W551	W551	W551			W551	W551	
+	Sem 2	Pre Calc Trig	CP Geo (T)	CP Geo (T)			CP Acc Alg 2	CP Acc Alg 2	
+	Room	W551	W551	W551			W551	W551	
+Natalie Reyes	Sem 1	Alg 2/Trig H	CP Acc Alg 1	CP Acc Alg 1		Alg 2/Trig H		CP Acc Alg 1	
+back to back Acc 1	Room	W308	W308	W308		W308		W308	
+	Sem 2	Alg 2/Trig H	CP Acc Alg 1	CP Acc Alg 1		Alg 2/Trig H		CP Acc Alg 1	
+	Room	W308	W308	W308		W308		W308	
+Bill Richardson	Sem 1	AP Stat	AP Stat		AP Stat		CP Acc Alg 1	CP Acc Alg 1	
+	Room	W307	W307		W307		W307	W307	
+	Sem 2	AP Stat	AP Stat		AP Stat		CP Acc Alg 1	CP Acc Alg 1	
+	Room	W307	W307		W307		W307	W307	
+Kim Shuman-Smith	Sem 1	CP Acc Geo	CP Acc Geo		CP Acc Alg 2	CP Acc Alg 2		CP Acc Alg 2	
+	Room	W545	W545		W545	W545		W545	
+	Sem 2	CP Acc Geo	CP Acc Geo		CP Acc Alg 2	CP Acc Alg 2		CP Acc Alg 2	
+	Room	W545	W545		W545	W545		W545	
+Chris Stirrup	Sem 1		CP Alg 1	CP Alg 1		CP Alg 1	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room		W433	W542		W542			
+RYAN .1 & CTE .3	Sem 2		CP Alg 1	CP Alg 1		CP Alg 1	x x x x x x x x x x	x x x x x x x x x x	x x x x x x x x x x
+	Room		W433	W542		W542			
+Igor Tomcej	Sem 1		Intro to Comp Sci	College Algebra	College Algebra			College Algebra	Intro to Comp Sci
+	Room		W431	W439	W439			W305	W431
+	Sem 2		Intro to Comp Sci	College Algebra	College Algebra			College Trig	Intro to Comp Sci
+	Room		W431	W439	W439			W305	W431
+Paul Trollinger	Sem 1		AP Calc AB	AP Calc AB	AP Calc AB		Pre Calc Trig	Pre Calc Trig	
+	Room		W306	W306	W306		W306	W306	
+	Sem 2		AP Calc AB	AP Calc AB	AP Calc AB		Pre Calc Trig	Pre Calc Trig	
+	Room		W306	W306	W306		W306	W306	
+Teacher A	Sem 1						CP Alg 2	CP Alg 2	AP Calc AB
+	Room						W436	W436	W437
+	Sem 2						CP Alg 2	CP Alg 2	AP Calc AB
+	Room						W436	W436	W437
+Cayel Dwyer	Sem 1				Intervention		Intervention	Pre Calc Trig	Alg 2/Trig H
+	Room							W441	W441
+RELEASE .4 	Sem 2				Intervention		Intervention	Pre Calc Trig	Alg 2/Trig H
+INTERVENTION .2	Room							W441	W441

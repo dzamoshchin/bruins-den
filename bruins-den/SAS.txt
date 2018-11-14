@@ -1,0 +1,15 @@
+scarpenter, Shiloh, Carpenter, E96A, 42226, | |Elem of Econ 1 / Elem of Econ 2 - E 94| | |Elem US History - E 310|Elem World Hist. - E 310|Elem World Hist. - E 310| 
+hcreech, Heather, Creech, E94B, 42231, |Elem Eng 10 - E 96| |English Found. - E 87| | |Elem Eng 9 - E 96| |ASL / ASL - E 96
+tcullen, Tara, Cullen, E74A, 42246, |Elem Eng 11 - E 70|Elem US History - E 70|Elem Eng 10 - E 70| | | |Elem Lit/Film / Elem Mult-Cult - E 70| 
+adempsey, Annemarie, Dempsey, E92A, 42478, |CP Alg 1 - TM - W 437|CP Alg - TM - W 437|Elem of Geom - W 306| | |CP Alg 1 - TM - W 437| | 
+adeweese, Ann, DeWeese, E92A, 42366, | |ASL / ASL - E 96|Elem Eng 12 - E 96|Elem Eng 11 - E 96|ASL / ASL - E 96| | | 
+*neads, Nancy, Eads, E98, 42219, | | | | | |ASL / ASL - E 94|ASL / ASL - E 94| 
+nfisher4, Niccole, Fisher, E94B, 42110, | |Biology - TM - W 529|Int Alg/Geom - W 441| |Biology - TM - W 529|Int Alg/Geom - W 441| | 
+kforsythe, Kristy, Forsythe, E94B, 42370, |ASL / ASL - E 87|Elem Eng 9 - E 87| | | | |Elem Eng 10 - E 87| 
+tgefrohneumann, Tracy, Gefroh-Neumann, E92A, 42214, |Elem Am. Gov - E 310|Elem Soc. 1 - E 310|Elem US History - E 310|CP US Hist. - TM - IC 735| | | | 
+dhicks, DeeDee, Hicks, E94B, 42162, |Phys. Sci - TM - W 531| |ASL / ASL - E 96|ASL / ASL - E 70| | | |ASL / ASL - E 70
+borzak, Blake, Orzak, E96A, 42179, |Pract. Work Apps - E 93|Pract. Math - E 93|Pract. Math - E 93|Pract. Soc. Studies - E 93| | | | 
+gostedgaard, Garrett, Ostedgaard, E73, 42078, | |ILC Soc. Studies - E 73|ILC English - E 73|ILC Math - E 73|Pract. Foods/Nutr. - E 73| | |ILC Science - E 73
+tsimpson, Tess, Simpson, E93, 42275, | |Pract. English - E 93|Pract. English - E 93| | |Arts Exploration - FA 607| |Pract. Science - E 93
+nutterback, Natasha, Utterback, E74A, 42440, | |Elem Psychology - E 71|Elem Eng 9 - E 71| | |Elem Soc 1 / Elem Soc 2 - E 71| |Health & Wellness / Elem Phys. Ed - E 71
+jvanecko, Jaime, Vanecko, E92A, 42446, | |CP Geometry - TM - W 551|CP Geometry - TM - W 551| |CP Alg. 1 - TM - W 437|Elem. Int. Alg/Geom - W 547| | 
