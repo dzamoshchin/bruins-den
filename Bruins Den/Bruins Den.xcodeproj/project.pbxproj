@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F2FFE0C219B2A1B0034F342 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D5B70E1F63904700646D95 /* GoogleService-Info.plist */; };
+		406CB490219C730800E70118 /* SubSportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CB48F219C730800E70118 /* SubSportsTableViewController.swift */; };
 		4701ED261EF3025000481B14 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4701ED251EF3025000481B14 /* CalendarViewController.swift */; };
 		4709FA6C1F27BB9A00D89F04 /* SearchTeachersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709FA6B1F27BB9A00D89F04 /* SearchTeachersTableViewCell.swift */; };
 		47143B731F06C0F20055061C /* PowerschoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47143B721F06C0F20055061C /* PowerschoolViewController.swift */; };
@@ -47,7 +48,6 @@
 		47A394CA1F114EC3003BA501 /* AthleticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A394C91F114EC3003BA501 /* AthleticsViewController.swift */; };
 		47A394CD1F114FDB003BA501 /* AthleticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A394CC1F114FDB003BA501 /* AthleticsTableViewCell.swift */; };
 		47A5F1211F28309B00890990 /* SeasonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5F1201F28309B00890990 /* SeasonsViewController.swift */; };
-		47A5F1251F28374300890990 /* SubSportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5F1241F28374300890990 /* SubSportsTableViewController.swift */; };
 		47A5F1271F28376300890990 /* SubSportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5F1261F28376300890990 /* SubSportsTableViewCell.swift */; };
 		47A5F1291F2837D700890990 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5F1281F2837D700890990 /* Sport.swift */; };
 		47B0D9E41EF4414E00549555 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B0D9E31EF4414E00549555 /* EventDate.swift */; };
@@ -91,6 +91,7 @@
 		2E4632EF03A24B2BE06A7A5C /* Pods-Bruins Den.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bruins Den.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den.debug.xcconfig"; sourceTree = "<group>"; };
 		3F9922CF1EBBAF86003721B7 /* Screen1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen1ViewController.swift; sourceTree = "<group>"; };
 		3F9922D11EBBAFF0003721B7 /* Screen2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen2ViewController.swift; sourceTree = "<group>"; };
+		406CB48F219C730800E70118 /* SubSportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSportsTableViewController.swift; sourceTree = "<group>"; };
 		4701ED251EF3025000481B14 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4709FA6B1F27BB9A00D89F04 /* SearchTeachersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTeachersTableViewCell.swift; sourceTree = "<group>"; };
 		47143B721F06C0F20055061C /* PowerschoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerschoolViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 		47A3AA7C1EE0ABEF00565A3E /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		47A3AA7E1EE0CD9600565A3E /* Menu2CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu2CollectionViewCell.swift; sourceTree = "<group>"; };
 		47A5F1201F28309B00890990 /* SeasonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsViewController.swift; sourceTree = "<group>"; };
-		47A5F1241F28374300890990 /* SubSportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubSportsTableViewController.swift; path = ../SubSportsTableViewController.swift; sourceTree = "<group>"; };
 		47A5F1261F28376300890990 /* SubSportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSportsTableViewCell.swift; sourceTree = "<group>"; };
 		47A5F1281F2837D700890990 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		47B0D9E31EF4414E00549555 /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDate.swift; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 				47A394CC1F114FDB003BA501 /* AthleticsTableViewCell.swift */,
 				471CAEF41F12997A00BB0125 /* TwitterViewController.swift */,
 				47A5F1201F28309B00890990 /* SeasonsViewController.swift */,
-				47A5F1241F28374300890990 /* SubSportsTableViewController.swift */,
+				406CB48F219C730800E70118 /* SubSportsTableViewController.swift */,
 				47A5F1281F2837D700890990 /* Sport.swift */,
 				47A5F1261F28376300890990 /* SubSportsTableViewCell.swift */,
 				47800D2D1F2900DE00231A3F /* DetailAthleticsViewController.swift */,
@@ -575,7 +575,6 @@
 				474113221F5B9F18008599B9 /* MapsViewController.swift in Sources */,
 				4796B6471F8198EC00C53A52 /* ChannelViewController.swift in Sources */,
 				4755D0B91F0C0B52005D394B /* TeachersViewController.swift in Sources */,
-				47A5F1251F28374300890990 /* SubSportsTableViewController.swift in Sources */,
 				47FBCF651EF1CD4A00404953 /* SideBarTableViewController.swift in Sources */,
 				47FBCF661EF1CD4A00404953 /* Menu2CollectionViewCell.swift in Sources */,
 				7A7F6B001F34E1FA006022B6 /* ClubProfileViewController.swift in Sources */,
@@ -584,6 +583,7 @@
 				47F55E211F253A48001F8695 /* DocTableViewCell.swift in Sources */,
 				47FBCF681EF1CD4A00404953 /* SideBarViewController.swift in Sources */,
 				47A5F1211F28309B00890990 /* SeasonsViewController.swift in Sources */,
+				406CB490219C730800E70118 /* SubSportsTableViewController.swift in Sources */,
 				47D934881F241ADB005037B0 /* DocumentsViewController.swift in Sources */,
 				47C9142F1F2694DA003D5313 /* DetailScheduleViewController.swift in Sources */,
 				4755D0B11F0C0B1B005D394B /* FacultyViewController.swift in Sources */,
