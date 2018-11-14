@@ -189,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingPage" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-rm-rN7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingPage" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-rm-rN7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drS-HA-0XS">
@@ -511,7 +511,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzt-k1-Q17">
+                            <containerView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzt-k1-Q17">
                                 <rect key="frame" x="0.0" y="466" width="414" height="430"/>
                                 <connections>
                                     <segue destination="oES-s0-NVb" kind="embed" id="Zmm-U2-bOh"/>
@@ -589,7 +589,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-xQ-pw2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-xQ-pw2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVF-NC-fbU">
@@ -1110,12 +1110,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P86-4S-pr0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="242.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </webView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-B8-5de">
+                                <rect key="frame" x="20" y="0.0" width="374" height="242.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q93-11-aGs">
-                                <rect key="frame" x="0.0" y="242.5" width="414" height="531.5"/>
+                                <rect key="frame" x="0.0" y="262.5" width="414" height="511.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Announcements" id="aCa-HR-MlV" customClass="AnnouncementsTableViewCell" customModule="Bruins_Den" customModuleProvider="target">
@@ -1160,19 +1164,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Q93-11-aGs" firstAttribute="top" secondItem="P86-4S-pr0" secondAttribute="bottom" id="1lF-FS-sqt"/>
-                            <constraint firstItem="P86-4S-pr0" firstAttribute="leading" secondItem="fRP-mh-Dx7" secondAttribute="leading" id="EPT-5v-gAW"/>
-                            <constraint firstAttribute="trailing" secondItem="P86-4S-pr0" secondAttribute="trailing" id="EVF-Ti-JJe"/>
-                            <constraint firstItem="P86-4S-pr0" firstAttribute="top" secondItem="3rN-CE-8xU" secondAttribute="bottom" id="KtE-8V-iON"/>
+                            <constraint firstItem="qbz-B8-5de" firstAttribute="leading" secondItem="fRP-mh-Dx7" secondAttribute="leadingMargin" id="F9r-pT-0zd"/>
                             <constraint firstItem="Q93-11-aGs" firstAttribute="centerX" secondItem="fRP-mh-Dx7" secondAttribute="centerX" id="KtF-5s-0bH"/>
                             <constraint firstItem="2Kp-g0-Hcx" firstAttribute="top" secondItem="Q93-11-aGs" secondAttribute="bottom" id="Og2-EA-E0S"/>
+                            <constraint firstItem="qbz-B8-5de" firstAttribute="height" secondItem="fRP-mh-Dx7" secondAttribute="height" multiplier="0.3" id="Qoa-qA-Wfq"/>
                             <constraint firstItem="Q93-11-aGs" firstAttribute="width" secondItem="fRP-mh-Dx7" secondAttribute="width" id="dMm-un-14f"/>
-                            <constraint firstItem="P86-4S-pr0" firstAttribute="height" secondItem="fRP-mh-Dx7" secondAttribute="height" multiplier="0.3" id="p3Z-QD-wBm"/>
+                            <constraint firstItem="qbz-B8-5de" firstAttribute="top" secondItem="3rN-CE-8xU" secondAttribute="bottom" id="qkb-KN-Efb"/>
+                            <constraint firstItem="Q93-11-aGs" firstAttribute="top" secondItem="qbz-B8-5de" secondAttribute="bottom" constant="20" id="wlI-7D-aLG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qbz-B8-5de" secondAttribute="trailing" id="x9J-vQ-GkG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Q93-11-aGs" id="6G6-9h-QrJ"/>
-                        <outlet property="videoView" destination="P86-4S-pr0" id="pmU-4r-QY2"/>
+                        <outlet property="videoView" destination="qbz-B8-5de" id="Ya9-DP-CeL"/>
                         <segue destination="jzo-Nf-nc9" kind="show" identifier="channel" id="TJw-wd-NbI"/>
                     </connections>
                 </viewController>

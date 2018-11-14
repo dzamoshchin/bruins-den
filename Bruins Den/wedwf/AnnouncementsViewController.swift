@@ -8,11 +8,12 @@
 
 import UIKit
 import FirebaseDatabase
+import WebKit
 
-class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource, WKNavigationDelegate {
     
 
-    @IBOutlet weak var videoView: UIWebView!
+    @IBOutlet weak var videoView: WKWebView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,16 +43,18 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
                 print(dict.value(forKey: "Text") as! String)
                 let youtubeURL = dict.value(forKey: "Link") as! String
                 self.videoView.scrollView.contentInset = UIEdgeInsets.zero
-                self.videoView.allowsInlineMediaPlayback = true
-                
-                self.videoView.loadHTMLString("<iframe width=\"\(self.videoView.frame.width)\" height=\"\(self.videoView.frame.height)\" src=\"\(youtubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+//                self.videoView.allowsInlineMediaPlayback = true
+                let url = URL(string: youtubeURL)!
+                self.videoView.load(URLRequest(url: url))
+                self.videoView.allowsBackForwardNavigationGestures = true
+//                self.videoView.loadHTMLString("<iframe width=\"\(self.videoView.frame.width)\" height=\"\(self.videoView.frame.height)\" src=\"\(youtubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
                 self.videoView.reload()
             }
         })
         
         //announcements = ["rfnergnreogeorgi erogjeroigjeogjoer gjoerjgoierjgoejrog", "rfnergnreogeorgierogj eroigjeogjoerg joerjgoierjgoejrog", "wnfejrgiergnkergherkgneriugjnerkgergnfvjdfgligjlergergnerligerlgkerlgirejlgejrogjerlgjergjergljerigjerlgjerlgerlgkjeergjnerkgjenrjgnerkjgekrgnkerjngkejrngkerjg"]
         
-        videoView.delegate = self
+        videoView.navigationDelegate = self
         tableView.delegate = self
         tableView.dataSource = self
         

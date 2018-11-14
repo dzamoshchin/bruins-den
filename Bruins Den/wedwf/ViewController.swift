@@ -80,25 +80,25 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         //HAMBURGER ICON
-        let image = #imageLiteral(resourceName: "menu")
-        let fr = CGRect(x: 0, y: 0, width: 30, height: 30)
-        let barButton = BadgedBarButtonItem(
-            startingBadgeValue: 1,
-            frame: fr,
-            image: image
-        )
-        barButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+//        let image = #imageLiteral(resourceName: "menu")
+//        let fr = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        let barButton = BadgedBarButtonItem(
+//            startingBadgeValue: 1,
+//            frame: fr,
+//            image: image
+//        )
+//        barButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
         
         /*let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         backButton.setBackgroundImage(UIImage(named: "menu"), for: .normal)
         backButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControlEvents.touchUpInside) */
         //self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-        barButton.badgeValue = 0
-        
-        self.navigationItem.leftBarButtonItem = barButton
-        self.navigationItem.leftBarButtonItem?.isEnabled = true
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-        
+//        barButton.badgeValue = 0
+//
+//        self.navigationItem.leftBarButtonItem = barButton
+//        self.navigationItem.leftBarButtonItem?.isEnabled = true
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+//
         
         if self.revealViewController() != nil {
             
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
             label.text = "Cherry Creek"
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 2
-            label.font = UIFont(name: "Helvetica Neue", size: 28)
+            label.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
             label.textAlignment = .center
             label.textColor = UIColor.white
             label.sizeToFit()
@@ -159,10 +159,10 @@ class ViewController: UIViewController {
             label2.text = "High School"
             label2.backgroundColor = UIColor.clear
             label2.numberOfLines = 2
-            label2.font = UIFont(name: "Helvetica Neue", size: 28)
+            label2.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
             label2.textAlignment = .center
             label2.textColor = UIColor.white
-            
+
             label2.sizeToFit()
             label.center.x = t.center.x
             label2.center.x = t.center.x
@@ -175,11 +175,11 @@ class ViewController: UIViewController {
             print("laj11")
         } else {
             print("old")
-            let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height: 200))
+            let label = UILabel(frame: CGRect(x:0, y:100, width:self.view.frame.size.width/2, height: 200))
             label.text = "Cherry Creek\nHigh School"
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 2
-            label.font = UIFont(name: "Helvetica Neue", size: 28)
+            label.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
             label.textAlignment = .center
             label.textColor = UIColor.white
             print("laj")
