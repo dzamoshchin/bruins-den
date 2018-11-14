@@ -36,6 +36,7 @@ class DetailScheduleViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "toSchedule" {
             container = segue.destination as? BellScreenContainerViewController
+            print("TYPE: \(type)")
             container?.sc = type
         }
     }
