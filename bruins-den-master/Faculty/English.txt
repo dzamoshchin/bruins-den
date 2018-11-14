@@ -1,0 +1,110 @@
+Teacher 	Period 1	Period 2	Period 3	Period 4	Period 5	Period 6	Period 7	Period 8
+Office No./Ext. No.	7:10 - 8:01	8:08 - 9:00	9:06 - 10:01	10:08 - 10:59	11:06 - 11:57	12:04  - 12:55	1:02 - 1:53	2:00 - 2:51
+"Feld, Samuel"		AP Lit	AP Lit	ASC	ASC	ASC		
+E307 / 42332		E305	E305	E301	E200	E207		
+						j		
+"Abrahamsson, Yael"	AP Lit	English 10H		AP Lit		English 10 H	English 10H	 
+800ALibrary/42230	IC746	IC 746		IC 746		IC 746	IC 746	
+			 				 	 
+"Benham, Marti"	Adv. Deb. Ext	Adv Deb LDF	AdvDebOO	Adv. Deb. PF	 			CX Debate
+FA625/42216	FA625	FA625	FA625	FA625	 			FA625
+								
+"Cave, Emily"		CP English 11		CP English 11	Beg. Debate		CP English 9	CP English 9 
+FA621A/42523		E303		IC736	FA624		E404	E404
+ 								
+"Chapman, Mary Beth"	CP English 11			English 10 H	English 10H	 	Sci/Fi/SciFi	English 10H
+E204A/42525	E207			E 207	E207		E207	E207
+								
+"Crecelius, Stefani"	CP English 10		CP English 10		Engish 10 H	English 10H	CP English 10	
+IC714A/42190	IC736		IC 743		IC743	IC737	IC737	
+								
+"Doyle, Mhari"	AP Lang	CP English 9		AP Lang		CP English 9		Shakes/Shakes
+E202A/42120	E202	E202		E202		E202		E202
+								
+"Eichorn, Andy"	Senior Seminar	Senior Seminar		English  9H		CP English 11	English 9H	
+E202A/42163	E300	E300		E300		E300	E300	
+								
+"Foster, Jason"	Intro ColLit/SciFi	English 10H	SciFi/SciFi		English  10H		English 10H	
+E404A/42437	E400	E400	E400		E400		E400	
+								
+"Gilbert, Kim"		English 9H	AP Lang			10Humanities	10Humanities	AP Lang
+IC 714A / 42189		IC736	IC 736			IC736	IC736	IC736
+								
+"Gunneson, Kate"	English 10H		English 10H	Senior Seminar				
+E204A / 42321	E303		E303	E303				
+								
+"Gustafson, Matt"	Cr.Wrt/Cr.Wrt			Cr.Writ/Cr. Writ		AP Lang	AP Lang	English 9H
+IC714A/42529	IC 743			IC743		IC743	IC 743	IC 743
+								
+"Holladay, Carlye"	Beg.Debate	Beg.Debate	Adv.DebateO.O.			NarrArt/NarrArt	NarrArt/NarrArt	
+FA624/42311	FA624	FA624	FA624			FA624	FA624	
+								
+"Hughes, Debbie"		AP Lang	CP English 11	AP Lang				
+E200A / 42431		E207	E207	E209				
+								
+"Hughes, Loreen"	CP English 10	CP English 10			CP English 10		CP English 10	CP English 11
+E406A/42218	E302	E302			E302		E302	E302
+								
+"Jacob, Chris"	English 10H	English 10H	English 10H			AP Lang	AP Lang	
+E304A / 42331	E301	E301	E301			E301	E301	
+								
+"Kellog-Dunlop, Emily"		CP English 9	CP English 9		CP English 9*			
+E404A/42314		E404	E404		E404			
+								
+"Kort, Kim"	WrClinc/RWSuce	Cont. Authors(S2)			Read 1-2	Read 3-4	Read 1-2	
+IC 714B/ 42470	IC739	IC739			IC739	IC739	IC739	
+								
+"Mazenko, Michael"			AP Lang					
+W543A / 42185			IC746					
+								
+"Park, Yoon"		Humanities 9	Humanities 9			AP Lang	WrtFilm/MulCul	AP Lit
+E204A / 42342		E320	E320			E305	E305	E305
+								
+"Philipps, Lesley"	CP English 11	English 9H			English 9H	CP English 11 *	CP English 11	
+E204A / 42489	E203	E203			E203	E203	E203	
+								
+"Pope, Vernal"	CP English 11	CP English 11	CP English 11			AfAmLit/AfAmLit		Crt.Wrt/CrtWrt
+E206A / 42480	E209	E209	E209			E209		E209
+								
+"Ramsey, Sarah"	AP Art History	CP English 11	CP English 11			AP Art History	CP English 11	
+E200A / 42518	E200	E200	E200			E200	E200	
+								
+"Riegler, Kirsten"	AP Lang		AP Lang	CP English 9 *		CP English 9		
+E206A/42334	E304		E304	E304		E304		
+								
+"Rowe, David"	SES		AP Lang	AP Lang		Senior Seminar	Senior Seminar	
+E204A/42522	Shillinglaw		E205	E205		E205	E205	
+								
+"Russell, Susie"	CP English 9	CP English 10*	CP English 10		CP English 10		CP English 9	
+E200A/42517	E211	E211	E211		E211		E211	
+								
+"Schneider, Jim"	English 9H		Senior Seminar	Senior Seminar		English 9H	English 9H	
+E203A/42521	E204		E204	E204		E204	E204	
+								
+"Shadwell, Stephany"	AP Lang		English 9H	Aw.WinS1/Aw.WinS2		English 9H	AP Lang	
+E202A/42520	E406		E406	E406		E406	E406	
+								
+"Swanson, Tim"	English 9H	WrFilm/ColComp		Col Comp/WrFilm	English 9H			WrFilm/WrFilm
+IC714A / 42193	IC737	IC737		IC737	IC737			IC737
+								
+"Voss, Marissa"		CrtWrt/CrtWrt	CrtWrt/CrtWrt	CP English 11				
+E304A/42447		E402	E402	E402				
+								
+"Werber, Lisa"		English 9H	English 9H		English 9H			
+E404A / 42161		E204	E202		E202			
+								
+Teacher A		AP Lang		CP English 10		CP English 10	CP Englsh 10	CP English 10
+		E205		E302		E 302	E402	E 300
+								
+Teacher B	CP English 9		CP English 9		CP English 9		English 10 H	English 10 H
+	E 402		E 300		E300		E 304	E 304
+								
+Teacher C			English 9H	English 9H		CP Humantiies 9	CP Humanities 9	Journalism
+			E203	E 203		E320	E320	IC703
+								
+Teacher D		CP English 10	CP English 10			AP Lit	AP Lit	CP English 10
+		E304	E302			E303	E303	E303
+								
+Teacher E	CP English 10	/Aw.WinS2						
+	E205	E406Sem2						
+								

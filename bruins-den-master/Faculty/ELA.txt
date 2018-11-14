@@ -1,0 +1,10 @@
+Teacher 	Term Room #	Period 1	Period 2	Period 3	Period 4	Period 5	Period 6	Period 7	Period 8
+"Perez, Dayna"	S1	Coordinator	CP Eng 10 w/Russell	ELA Support 10	ELA Support 11/12	lunch	CP Eng 11 w/ Philipps	Testing/plan	Testing/plan
+	Room		E211	E99	E107		E203		
+	S2 	Coordinator	CP Eng 10 w/Russell	ELA Support 10	ELA Support 11/12	lunch	CP Eng 11 w/ Philipps	Testing/plan	Testing/plan
+	Room		E211	E99	E107		E203		
+"Aldgride, Andrea"	S1	Planning	CP Eng 9 w/Dunlop	ELA Support 9	CP Eng 9 w/Riegler	ELA New Comers	lunch	Biology w/Broznak	Planning
+	Room		E404	E107	E304	E107		W529	
+	S2 	Planning	CP Eng 9 w/Dunlop	ELA Support 9	CP Eng 9 w/Riegler	ELA New Comers	lunch	Biology w/Broznak	Planning
+	Room		E404	E107	E304	E107		W529	
+									

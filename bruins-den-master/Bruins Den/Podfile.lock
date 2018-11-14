@@ -1,0 +1,114 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AZDropdownMenu (1.1.2)
+  - DownPicker (0.1.34)
+  - Firebase/Core (4.0.2):
+    - FirebaseAnalytics (= 4.0.1)
+    - FirebaseCore (= 4.0.2)
+  - Firebase/Database (4.0.2):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.0.0)
+  - Firebase/Messaging (4.0.2):
+    - Firebase/Core
+    - FirebaseMessaging (= 2.0.0)
+  - Firebase/Storage (4.0.2):
+    - Firebase/Core
+    - FirebaseStorage (= 2.0.0)
+  - FirebaseAnalytics (4.0.1):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCore (4.0.2):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - FirebaseStorage (2.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (4.0.0):
+    - Firebase/Storage
+    - SDWebImage (~> 4.0)
+  - FSCalendar (2.7.8)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/Logger (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.1)":
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - GTMSessionFetcher/Core (1.1.10)
+  - Protobuf (3.3.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - skpsmtpmessage (0.0.1)
+  - TwitterCore (3.0.0)
+  - TwitterKit (3.0.3):
+    - TwitterCore (>= 3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - AZDropdownMenu
+  - DownPicker
+  - Firebase/Core
+  - Firebase/Database
+  - Firebase/Messaging
+  - Firebase/Storage
+  - FirebaseUI/Storage
+  - FSCalendar
+  - skpsmtpmessage
+  - TwitterKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AZDropdownMenu
+    - DownPicker
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseStorage
+    - FirebaseUI
+    - FSCalendar
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - Protobuf
+    - SDWebImage
+    - skpsmtpmessage
+    - TwitterCore
+    - TwitterKit
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AZDropdownMenu: 411c1b445fd29bb1e56b219131aaf294ba21b9b6
+  DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
+  Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
+  FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
+  FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
+  FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
+  FirebaseUI: b9de05bfb4768db05f64ea90fc2f6a07b819118f
+  FSCalendar: 09369a2bf554ba71cd8e8cfb627e2df22a2c2af4
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
+  TwitterCore: 8ce250be1eb34633a0e6acc89520d4165ec52c10
+  TwitterKit: 202404be71aadd81d19f677b34579fe77d9cb67e
+
+PODFILE CHECKSUM: 53e3193788c0e4f3e7c02dc8ec17af79d4177cbd
+
+COCOAPODS: 1.5.3
