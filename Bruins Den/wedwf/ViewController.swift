@@ -128,10 +128,6 @@ class ViewController: UIViewController {
             self.scrollView.addSubview(subview)
             
         }
-        //creating divider line between buttons on main screen (call us and campus map)
-        let line = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: campus.frame.size.height))
-        line.backgroundColor = UIColor.white
-        campus.addSubview(line)
         
         //TITLE OF APP (CHERRY CREEK HIGH SCHOOL)
         /*let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height: 200))

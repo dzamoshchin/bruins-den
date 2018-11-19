@@ -101,7 +101,7 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
         
         let head = str.substring(to: (index?.lowerBound)!)
         cell.heading.text = head
-        cell.title.text = str.substring(from: (index?.upperBound)!)
+        cell.title.text = str.substring(from: (index?.upperBound)!).trimmingCharacters(in: .whitespacesAndNewlines)
         
         
         return cell

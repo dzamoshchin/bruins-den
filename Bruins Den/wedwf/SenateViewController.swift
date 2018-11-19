@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
-class SenateViewController: UIViewController {
+class SenateViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
@@ -22,7 +24,12 @@ class SenateViewController: UIViewController {
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
         self.title = "Senate Voting"
-        webView.loadRequest(NSURLRequest(url: NSURL(string: "https://vote.associationvoting.com/cchs/")! as URL) as URLRequest)
+        
+        webView.navigationDelegate = self
+        
+        let url = URL(string: "https://vote.associationvoting.com/cchs/")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
 
         // Do any additional setup after loading the view.
     }
