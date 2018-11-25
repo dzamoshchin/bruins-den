@@ -8,8 +8,6 @@
 
 import UIKit
 import Firebase
-import SDWebImage
-
 
 class DepartmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -32,9 +30,6 @@ class DepartmentViewController: UIViewController, UITableViewDelegate, UITableVi
         let storageRef = storage.reference()
         //let imagesRef = storageRef.child("images")
         let placeholder = UIImage(named: "placeholder.jpg")
-        
-        
-        
         
         //an array to hold all the keys of the departments to be used for later reference paths
         var keys: [String] = []
@@ -108,10 +103,10 @@ class DepartmentViewController: UIViewController, UITableViewDelegate, UITableVi
                                         var str = " "
                                         if fac.hasPrefix("*"){
                                             str = fac.substring(from: fac.index(fac.startIndex, offsetBy: 1))
-                                            facRef = storageRef.child("images/faculty/\(str).jpg")
+                                            facRef = storageRef.child("18-19/faculty/\(str).jpg")
                                         }else{
                                             str = fac
-                                            facRef = storageRef.child("images/faculty/\(fac).jpg")
+                                            facRef = storageRef.child("18-19/faculty/\(fac).jpg")
                                         }
                                         
                                         if let r = UIImage(named: str) {
@@ -143,7 +138,7 @@ class DepartmentViewController: UIViewController, UITableViewDelegate, UITableVi
                                                 vc.endFrame.reloadData()
                                             }
                                             
-                                        }else{
+                                        } else {
                                             facRef.downloadURL { (url, error) in
                                                 if url != nil{
                                                     if let data = NSData(contentsOf: url!){

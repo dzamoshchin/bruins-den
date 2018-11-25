@@ -20,19 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //check whether initial settings need to be set, if not go straight into application
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        var viewController: UIViewController = UIViewController()
-//        
-//        //viewController = mainStoryboard.instantiateViewController(withIdentifier: "swRevealViewController") as! SWRevealViewController
-//        viewController = mainStoryboard.instantiateViewController(withIdentifier: "swRevealViewController")
-//        print("User preferences have been set. Instantiating SW Reveal View Controller in AppDelegate")
-//        
-//        self.window?.makeKeyAndVisible()
-//        self.window?.rootViewController = viewController
-        //UINavigationBar.appearance().barTintColor = UIColor.red
         FirebaseApp.configure()
         
         if #available(iOS 10.0, *) {
@@ -51,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 application.registerForRemoteNotifications()
         
-        Twitter.sharedInstance().start(withConsumerKey:"7IXEpM3QcOQdfS9e9GeMPCHYP", consumerSecret:"9bo3cIwn9VkM6UovUt50bttFiP0nkxZs8rW4rFvtSpDEKTeAdO")
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"7IXEpM3QcOQdfS9e9GeMPCHYP", consumerSecret:"9bo3cIwn9VkM6UovUt50bttFiP0nkxZs8rW4rFvtSpDEKTeAdO")
         return true
     }
 

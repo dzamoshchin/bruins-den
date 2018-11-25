@@ -19,8 +19,7 @@ class Screen2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TopNavBarBackground2"), for: .default)
-        cells += [MenuButton("PowerSchool", #imageLiteral(resourceName: "powerschool")), MenuButton("Union Street Journal", #imageLiteral(resourceName: "unionstreet")), MenuButton("Senate Voting", #imageLiteral(resourceName: "senate"))]
-        
+        cells += [MenuButton("PowerSchool", #imageLiteral(resourceName: "powerschool")), MenuButton("Union Street Journal", #imageLiteral(resourceName: "unionstreet")), MenuButton("Senate Voting", #imageLiteral(resourceName: "senate")), MenuButton("Master Calendar",#imageLiteral(resourceName: "Calendar-1")), MenuButton("Documents", #imageLiteral(resourceName: "Documents")), MenuButton("Settings", #imageLiteral(resourceName: "Settings"))]
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -48,7 +47,7 @@ class Screen2ViewController: UIViewController {
 }
 extension Screen2ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return cells.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,33 +92,17 @@ extension Screen2ViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //CLICKING ON COLLECTIONVIEWCELL
         if(indexPath.row == 0) {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toPower", sender: self)
         } else if indexPath.row == 1 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toUSJ", sender: self)
         } else if indexPath.row == 2 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toSenate", sender: self)
+        } else if indexPath.row == 3 {
+            
+        } else if indexPath.row == 4 {
+            performSegue(withIdentifier: "toDocs", sender: self)
+        } else if indexPath.row == 5 {
+            
         }
-        /*
-         switch (itemNo) {
-         case 1:
-         {
-         //perform segue to another UICollectionViewController.
-         }
-         case 2:
-         {
-         //perform segue to another UICollectionViewController.
-         }
-         .
-         .
-         .
-         }
-         
-         */
     }
 }

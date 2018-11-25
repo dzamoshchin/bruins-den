@@ -75,10 +75,6 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if isMovingFromParentViewController {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = true
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

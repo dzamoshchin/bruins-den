@@ -30,10 +30,6 @@ class AthleticsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if isMovingFromParentViewController {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = true
-        }
     }
 
     override func didReceiveMemoryWarning() {

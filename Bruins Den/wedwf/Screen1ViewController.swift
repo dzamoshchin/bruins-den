@@ -105,28 +105,16 @@ extension Screen1ViewController: UICollectionViewDataSource, UICollectionViewDel
         print(indexPath.row)
         //CLICKING ON COLLECTIONVIEWCELL
         if(indexPath.row == 1){
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toMy", sender: self)
         } else if (indexPath.row == 3){
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toSchedule", sender: self)
         } else if indexPath.row == 2 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toFaculty", sender: self)
         } else if indexPath.row == 4 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toAthletics", sender: self)
         } else if indexPath.row == 0 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toAnnouncements", sender: self)
         } else if indexPath.row == 5 {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = false
             performSegue(withIdentifier: "toClubs", sender: self)
         }
         /*

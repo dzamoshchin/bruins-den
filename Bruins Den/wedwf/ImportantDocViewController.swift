@@ -17,32 +17,28 @@ class ImportantDocViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = false
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
-        revealButton.target = self
-        revealButton.action = #selector(ImportantDocViewController.revealToggle)
         self.title = "Important Documents"
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func revealToggle() {
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = true
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        revealViewController().setFront(appDelegate?.mainViewController, animated: true)
-        revealViewController().revealToggle(self) // Optional
-        
     }
     
     //Table view

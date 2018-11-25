@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import SDWebImage
 
 //Global variables - stores database info accessible from anywhere
 var totalTeachers = [Teacher1]()
@@ -146,10 +145,10 @@ class InitialViewController: UIViewController {
                                         var str = " "
                                         if fac.hasPrefix("*"){
                                             str = fac.substring(from: fac.index(fac.startIndex, offsetBy: 1))
-                                            facRef = storageRef.child("images/faculty/\(str).jpg")
+                                            facRef = storageRef.child("18-19/18-19/\(str).jpg")
                                         }else{
                                             str = fac
-                                            facRef = storageRef.child("images/faculty/\(fac).jpg")
+                                            facRef = storageRef.child("18-19/faculty/\(fac).jpg")
                                         }
                                         
                                         if let r = UIImage(named: str) {

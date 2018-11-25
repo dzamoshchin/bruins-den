@@ -16,10 +16,7 @@ class NotificationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = false
-        revealButton.target = self
-        revealButton.action = #selector(NotificationsViewController.revealToggle)
+
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
@@ -54,15 +51,6 @@ class NotificationsViewController: UIViewController {
         /*UIApplication.shared.registerForRemoteNotifications()
         let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         UIApplication.shared.registerUserNotificationSettings(settings) */
-    }
-    
-    func revealToggle() {
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = true
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        revealViewController().setFront(appDelegate?.mainViewController, animated: true)
-        revealViewController().revealToggle(self) // Optional
-        
     }
     
     /*

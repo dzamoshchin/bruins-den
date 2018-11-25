@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     var frame: CGRect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 0, height: 0))
     
     //Pictures scrolling on top
-    var pictures = [#imageLiteral(resourceName: "Image1"), #imageLiteral(resourceName: "Image2"), #imageLiteral(resourceName: "Image3")]
+    var pictures = [#imageLiteral(resourceName: "Image1"), #imageLiteral(resourceName: "Photo1"), #imageLiteral(resourceName: "Image3")]
     
     var imageViews:[UIImageView] = []
     var height = CGFloat(0)
@@ -100,16 +100,6 @@ class ViewController: UIViewController {
 //        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
 //
         
-        if self.revealViewController() != nil {
-            
-            //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            //self.revealViewController().rearViewRevealWidth = 62
-            
-            self.revealViewController().rearViewRevealWidth = view.frame.size.width*0.8 //how much the side bar comes in
-            revealViewController().tapGestureRecognizer()
-            revealViewController().panGestureRecognizer()
-        }
-        
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.mainViewController = self.navigationController
         
@@ -123,6 +113,7 @@ class ViewController: UIViewController {
             let subview = UIImageView(frame: frame)
             subview.image = pictures[index]
             subview.contentMode = .scaleAspectFill
+            subview.clipsToBounds = true
             imageViews.append(subview)
             
             self.scrollView.addSubview(subview)

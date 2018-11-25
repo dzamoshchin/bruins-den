@@ -44,10 +44,6 @@ class SenateViewController: UIViewController, WKNavigationDelegate {
         navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        if isMovingFromParentViewController {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = true
-        }
     }
     
 

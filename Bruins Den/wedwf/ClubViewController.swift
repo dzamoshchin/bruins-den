@@ -85,10 +85,6 @@ class ClubViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if isMovingFromParentViewController {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = true
-        }
     }
     
     //Searching

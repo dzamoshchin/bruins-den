@@ -14,10 +14,6 @@ class AboutAppViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var revealButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = false
-        revealButton.target = self
-        revealButton.action = #selector(AboutAppViewController.revealToggle)
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
@@ -73,14 +69,6 @@ class AboutAppViewController: UIViewController, UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.height / 4
-    }
-    func revealToggle() {
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = true
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        revealViewController().setFront(appDelegate?.mainViewController, animated: true)
-        revealViewController().revealToggle(self) // Optional
-        
     }
     
     

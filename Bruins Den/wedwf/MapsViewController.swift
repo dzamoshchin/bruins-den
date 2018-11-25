@@ -18,8 +18,7 @@ class MapsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = false
+
         mapsTextField.rightView = UIImageView(image: #imageLiteral(resourceName: "downArrow"))
         
         let maps = ["West Building", "East Building", "IC Building", "Fine Arts", "Full Campus"]
@@ -44,7 +43,7 @@ class MapsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func dpSelect() {
+    @objc func dpSelect() {
         path = Bundle.main.path(forResource: downPick.text, ofType: "pdf")!
         let url = NSURL.fileURL(withPath: path)
         pdf.loadRequest(URLRequest(url: url))
@@ -54,11 +53,6 @@ class MapsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-       
-        if isMovingFromParentViewController {
-            let reveal = self.revealViewController()
-            reveal?.panGestureRecognizer().isEnabled = true
-        }
     }
     
 

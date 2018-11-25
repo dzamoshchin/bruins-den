@@ -8,7 +8,6 @@
 
 import UIKit
 import DownPicker
-import skpsmtpmessage
 
 class ContactViewController: UIViewController {
     //implement SKPSMTPMessageDelegate
@@ -24,15 +23,11 @@ class ContactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = false
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
         self.title = "Suggestion Box"
         webView.loadRequest(NSURLRequest(url: NSURL(string: "https://sites.google.com/view/cchsapp/home")! as URL) as URLRequest)
-        revealButton.target = self
-        revealButton.action = #selector(ContactViewController.revealToggle)
         /*
         subjectTextField.rightView = UIImageView(image: #imageLiteral(resourceName: "downArrow"))
         let persons = ["Cherry Creek HS", "CCHS Bruins Den App"]
@@ -52,14 +47,6 @@ class ContactViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    func revealToggle() {
-        let reveal = self.revealViewController()
-        reveal?.panGestureRecognizer().isEnabled = true
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        revealViewController().setFront(appDelegate?.mainViewController, animated: true)
-        revealViewController().revealToggle(self) // Optional
-        
     }
     
     /*

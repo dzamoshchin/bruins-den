@@ -8,8 +8,8 @@
 
 import UIKit
 import Firebase
-import FirebaseStorageUI
-import SDWebImage
+//import FirebaseStorageUI
+//import SDWebImage
 
 
 class TestViewController: UIViewController {
@@ -28,7 +28,7 @@ class TestViewController: UIViewController {
         let placehold = UIImage(named: "placeholder.jpg")
         
         
-        imageView.sd_setImage(with: test, placeholderImage: placehold)
+//        imageView.sd_setImage(with: test, placeholderImage: placehold)
         //roundabout way to get the image since placehold is nothing more than that - a placeholder
         let testImage = imageView.image
         placeholder.image = testImage
