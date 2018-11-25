@@ -6,7 +6,7 @@ It improves on the usability, appearance, and functionality of the previous vers
 
 ## To-Do:
 - [ ] Update teacher schedules
-- [x] Update bell Sshedule
+- [x] Update bell schedule
 - [ ] Update finals schedule
 - [ ] Remove side menu
 - [x] Update faculty images
