@@ -19,7 +19,7 @@ class NotificationsViewController: UIViewController {
 
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
+        self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         self.title = "Notifications"
         
         let noticationType = UIApplication.shared.currentUserNotificationSettings!.types
@@ -47,7 +47,7 @@ class NotificationsViewController: UIViewController {
     @IBAction func prompt(_ sender: UIButton) {
         //App-Prefs:root=NOTIFICATIONS_ID
         
-        UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
+        UIApplication.shared.openURL(URL(string:UIApplication.openSettingsURLString)!)
         /*UIApplication.shared.registerForRemoteNotifications()
         let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         UIApplication.shared.registerUserNotificationSettings(settings) */
@@ -63,4 +63,10 @@ class NotificationsViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

@@ -27,13 +27,13 @@ class DetailAthleticsViewController: UIViewController {
     var sport = Sport()
     var gender = -1
     var attrs : [String: Any] = [
-        NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 21),
-        NSForegroundColorAttributeName : UIColor.white,
-        NSUnderlineStyleAttributeName : 1]
+        convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont(name: "HelveticaNeue-Bold", size: 21),
+        convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : UIColor.white,
+        convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle) : 1]
     var attrs2 : [String: Any] = [
-        NSFontAttributeName : UIFont(name: "Helvetica Neue", size: 21),
-        NSForegroundColorAttributeName : UIColor.white,
-        NSUnderlineStyleAttributeName : 0]
+        convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont(name: "Helvetica Neue", size: 21),
+        convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : UIColor.white,
+        convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle) : 0]
     
     //Mile Split
     //
@@ -117,7 +117,7 @@ class DetailAthleticsViewController: UIViewController {
         super.viewDidLoad()
         self.title = sport.name
         let attribute = NSMutableAttributedString(string: "Game Schedule",
-                                                  attributes: attrs)
+                                                  attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
         games.setAttributedTitle(attribute, for: .normal)
         var website = ("", "")
         if gender == 0 {
@@ -219,8 +219,8 @@ class DetailAthleticsViewController: UIViewController {
             select = sender.tag
             if sender.tag == 0 {
                 let attribute = NSMutableAttributedString(string: "Game Schedule",
-                                                          attributes: attrs)
-                let attribute2 = NSMutableAttributedString(string: "Contact", attributes: attrs2)
+                                                          attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
+                let attribute2 = NSMutableAttributedString(string: "Contact", attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs2))
                 games.setAttributedTitle(attribute, for: .normal)
                 contact.setAttributedTitle(attribute2, for: .normal)
                 UIView.animate(withDuration: 0.5, animations: {
@@ -229,8 +229,8 @@ class DetailAthleticsViewController: UIViewController {
                 })
             } else {
                 let attribute = NSMutableAttributedString(string: "Contact",
-                                                          attributes: attrs)
-                let attribute2 = NSMutableAttributedString(string: "Game Schedule", attributes: attrs2)
+                                                          attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
+                let attribute2 = NSMutableAttributedString(string: "Game Schedule", attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs2))
                 games.setAttributedTitle(attribute2, for: .normal)
                 contact.setAttributedTitle(attribute, for: .normal)
                 UIView.animate(withDuration: 0.5, animations: {
@@ -251,4 +251,15 @@ class DetailAthleticsViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

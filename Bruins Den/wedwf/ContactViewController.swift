@@ -25,7 +25,7 @@ class ContactViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
+        self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         self.title = "Suggestion Box"
         webView.loadRequest(NSURLRequest(url: NSURL(string: "https://sites.google.com/view/cchsapp/home")! as URL) as URLRequest)
         /*
@@ -125,4 +125,10 @@ class ContactViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

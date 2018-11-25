@@ -73,7 +73,7 @@ open class BadgedBarButtonItem: UIBarButtonItem {
     */
     public var badgeProperties: BadgeProperties
     
-    public init(customView: UIView, value: Int, badgeProperties: BadgeProperties = BadgeProperties.default) {
+    public init(customView: UIView, value: Int, badgeProperties: BadgeProperties = BadgeProperties()) {
         self.badgeProperties = badgeProperties
         super.init()
         
@@ -87,7 +87,7 @@ open class BadgedBarButtonItem: UIBarButtonItem {
                 frame: CGRect,
                 title: String? = nil,
                 image: UIImage?,
-                badgeProperties: BadgeProperties = BadgeProperties.default) {
+                badgeProperties: BadgeProperties = BadgeProperties()) {
         
         self.badgeProperties = badgeProperties
         super.init()
@@ -153,9 +153,9 @@ public extension BadgedBarButtonItem {
                                    image: UIImage?) -> UIButton {
         
         let btn = UIButton(type: .custom)
-        btn.setImage(image, for: UIControlState())
-        btn.setTitle(title, for: UIControlState())
-        btn.setTitleColor(UIColor.black, for: UIControlState())
+        btn.setImage(image, for: UIControl.State())
+        btn.setTitle(title, for: UIControl.State())
+        btn.setTitleColor(UIColor.black, for: UIControl.State())
         btn.frame = frame
         
         return btn

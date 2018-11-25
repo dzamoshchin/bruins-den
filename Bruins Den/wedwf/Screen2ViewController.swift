@@ -57,7 +57,7 @@ extension Screen2ViewController: UICollectionViewDataSource, UICollectionViewDel
         
         cell.picture.frame.size = targetSize
         cell.picture.clipsToBounds = true
-        cell.picture.contentMode = UIViewContentMode.scaleAspectFit
+        cell.picture.contentMode = UIView.ContentMode.scaleAspectFit
         cell.picture.image = cells[indexPath.item].icon
         cell.backgroundColor = UIColor.clear
         return cell

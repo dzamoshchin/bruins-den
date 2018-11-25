@@ -61,7 +61,7 @@ class SideBarViewController: UIViewController {
         line.path = linePath.cgPath
         line.strokeColor = UIColor.black.cgColor
         line.lineWidth = 1
-        line.lineJoin = kCALineJoinRound
+        line.lineJoin = CAShapeLayerLineJoin.round
         self.view.layer.addSublayer(line)
     }
 

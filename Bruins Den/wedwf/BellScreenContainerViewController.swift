@@ -23,7 +23,7 @@ class BellScreenContainerViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         self.navigationController?.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
+        self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         addPeriods()
         var scheduleTimes = [String]()
         print(sc)
@@ -100,4 +100,10 @@ class BellScreenContainerViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

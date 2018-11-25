@@ -34,25 +34,25 @@ class ViewController: UIViewController {
     
     @IBAction func callUsButton(_ sender: Any) {
         //Creating alert view for various call options
-        let alert = UIAlertController(title: "Contact Cherry Creek HS", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-        let mainAction = UIAlertAction(title: "Main Office", style: UIAlertActionStyle.default) { (action) in
+        let alert = UIAlertController(title: "Contact Cherry Creek HS", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let mainAction = UIAlertAction(title: "Main Office", style: UIAlertAction.Style.default) { (action) in
             if let url = NSURL(string: "tel://7205542285"), UIApplication.shared.canOpenURL(url as URL) {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         
-        let attendanceAction = UIAlertAction(title: "Attendance", style: UIAlertActionStyle.default) { (action) in
+        let attendanceAction = UIAlertAction(title: "Attendance", style: UIAlertAction.Style.default) { (action) in
             if let url = NSURL(string: "tel://7205542242"), UIApplication.shared.canOpenURL(url as URL) {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         //ADD SAFE2TELL
-        let careAction = UIAlertAction(title: "Safe2Tell", style: UIAlertActionStyle.default) { (action) in
+        let careAction = UIAlertAction(title: "Safe2Tell", style: UIAlertAction.Style.default) { (action) in
             if let url = NSURL(string: "tel://18775427233"), UIApplication.shared.canOpenURL(url as URL) {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(mainAction)
         alert.addAction(attendanceAction)
         alert.addAction(careAction)
@@ -219,7 +219,7 @@ class ViewController: UIViewController {
         
        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
-    internal func updateTimer() {
+    @objc internal func updateTimer() {
         if updateCounter <= 1 {
             let rightOffset = CGPoint(x: scrollView.contentOffset.x + scrollView.frame.size.width, y: 0)
             scrollView.setContentOffset(rightOffset, animated: true)
@@ -243,10 +243,15 @@ class ViewController: UIViewController {
         line.path = linePath.cgPath
         line.strokeColor = UIColor.white.cgColor
         line.lineWidth = 1
-        line.lineJoin = kCALineJoinRound
+        line.lineJoin = CAShapeLayerLineJoin.round
         self.view.layer.addSublayer(line)
     }
 
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

@@ -30,48 +30,48 @@ class ClubProfileViewController: UIViewController {
         name.text = club?.name
         self.title = "Club Profile"
         var bold = "Sponsors: "
-        var attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 17)]
-        var attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
+        var attrs = [convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.boldSystemFont(ofSize: 17)]
+        var attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
         attributedString.append(NSMutableAttributedString(string: club!.sponsor!))
         sponsor.attributedText = attributedString
         
         bold = "Sponsor Office: "
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
         attributedString.append(NSMutableAttributedString(string: club!.office!))
         office.attributedText = attributedString
         
         bold = "Sponsor Email: "
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
         attributedString.append(NSMutableAttributedString(string: club!.email!))
         email.attributedText = attributedString
         
         
         //Switch it up!
-        attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 15)]
-        let attr = [NSFontAttributeName : UIFont.systemFont(ofSize: 15)]
+        attrs = [convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.boldSystemFont(ofSize: 15)]
+        let attr = [convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.systemFont(ofSize: 15)]
         
         bold = "Location: "
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
-        attributedString.append(NSMutableAttributedString(string: club!.location!, attributes: attr))
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
+        attributedString.append(NSMutableAttributedString(string: club!.location!, attributes: convertToOptionalNSAttributedStringKeyDictionary(attr)))
         location.attributedText = attributedString
         
         bold = "When: "
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
-        attributedString.append(NSMutableAttributedString(string: club!.days!, attributes: attr))
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
+        attributedString.append(NSMutableAttributedString(string: club!.days!, attributes: convertToOptionalNSAttributedStringKeyDictionary(attr)))
         days.attributedText = attributedString
         
         bold = "Time: "
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
-        attributedString.append(NSMutableAttributedString(string: club!.times!, attributes: attr))
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
+        attributedString.append(NSMutableAttributedString(string: club!.times!, attributes: convertToOptionalNSAttributedStringKeyDictionary(attr)))
         time.attributedText = attributedString
         
-        attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 17)]
+        attrs = [convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.boldSystemFont(ofSize: 17)]
         bold = "About Us\n"
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
         
-        attributedString = NSMutableAttributedString(string:bold, attributes:attrs)
-        attributedString.append(NSMutableAttributedString(string: club!.desc!, attributes: attr))
+        attributedString = NSMutableAttributedString(string:bold, attributes:convertToOptionalNSAttributedStringKeyDictionary(attrs))
+        attributedString.append(NSMutableAttributedString(string: club!.desc!, attributes: convertToOptionalNSAttributedStringKeyDictionary(attr)))
         
         des.attributedText = attributedString
         
@@ -113,4 +113,15 @@ class ClubProfileViewController: UIViewController {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

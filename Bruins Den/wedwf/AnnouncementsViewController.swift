@@ -26,7 +26,7 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
+        self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         self.title = "Announcements"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let ref = Database.database().reference(withPath: "Announcements")
@@ -58,7 +58,7 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 140
         
 
@@ -123,4 +123,10 @@ class AnnouncementsViewController: UIViewController, UIWebViewDelegate, UITableV
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

@@ -23,7 +23,7 @@ class Screen1ViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TopNavBarBackground2"), for: .default)
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 25)!]
+        self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         
         cells += [MenuButton("Announcements", #imageLiteral(resourceName: "announcements")), MenuButton("myCherryCreek", #imageLiteral(resourceName: "mycherry")), MenuButton("Faculty/Staff", #imageLiteral(resourceName: "faculty")), MenuButton("Bell Schedule", #imageLiteral(resourceName: "bell")), MenuButton("Athletics", #imageLiteral(resourceName: "athletic")), MenuButton("Clubs", #imageLiteral(resourceName: "clubs"))]
         
@@ -70,7 +70,7 @@ extension Screen1ViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.picture.frame.size = targetSize
         print(cell.picture.frame.size)
         cell.picture.clipsToBounds = true
-        cell.picture.contentMode = UIViewContentMode.scaleAspectFit
+        cell.picture.contentMode = UIView.ContentMode.scaleAspectFit
         cell.picture.image = cells[indexPath.item].icon
         cell.backgroundColor = UIColor.clear
         return cell
@@ -139,4 +139,10 @@ extension Screen1ViewController: UICollectionViewDataSource, UICollectionViewDel
     
     
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

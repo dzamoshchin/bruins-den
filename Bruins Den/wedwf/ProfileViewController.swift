@@ -33,13 +33,13 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var dptIcon: UIImageView!
     @IBOutlet weak var semesters: UIStackView!
     var attrs : [String: Any] = [
-        NSFontAttributeName : UIFont.systemFont(ofSize: 15, weight: 3),
-        NSForegroundColorAttributeName : colorTint,
-        NSUnderlineStyleAttributeName : 1]
+        convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.systemFont(ofSize: 15, weight: UIFont.Weight(rawValue: 3)),
+        convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : colorTint,
+        convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle) : 1]
     var attrs2 : [String: Any] = [
-        NSFontAttributeName : UIFont.systemFont(ofSize: 15),
-        NSForegroundColorAttributeName : colorTint,
-        NSUnderlineStyleAttributeName : 0]
+        convertFromNSAttributedStringKey(NSAttributedString.Key.font) : UIFont.systemFont(ofSize: 15),
+        convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : colorTint,
+        convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle) : 0]
     
     override func viewDidLoad() {
         phone.delegate = self
@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         //self.view.bringSubview(toFront: phone)
         self.title = "Teacher Profile"
         let attribute = NSMutableAttributedString(string: "Sem. 1",
-                                                  attributes: attrs)
+                                                  attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
         
         sem1Button.setAttributedTitle(attribute, for: .normal)
         
@@ -160,7 +160,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         line.path = linePath.cgPath
         line.strokeColor = UIColor.red.cgColor
         line.lineWidth = 1
-        line.lineJoin = kCALineJoinRound
+        line.lineJoin = CAShapeLayerLineJoin.round
         self.view.layer.addSublayer(line)
     }
     func parseTeachers(_ arr : [String]) {
@@ -209,8 +209,8 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
             select = sender.tag
             if sender.tag == 0 {
                 let attribute = NSMutableAttributedString(string: "Sem. 1",
-                                                          attributes: attrs)
-                let attribute2 = NSMutableAttributedString(string: "Sem. 2", attributes: attrs2)
+                                                          attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
+                let attribute2 = NSMutableAttributedString(string: "Sem. 2", attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs2))
                 sem1Button.setAttributedTitle(attribute, for: .normal)
                 sem2Button.setAttributedTitle(attribute2, for: .normal)
                 for i in 0..<sem1.count {
@@ -224,8 +224,8 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
                 
             } else {
                 let attribute = NSMutableAttributedString(string: "Sem. 2",
-                                                          attributes: attrs)
-                let attribute2 = NSMutableAttributedString(string: "Sem. 1", attributes: attrs2)
+                                                          attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs))
+                let attribute2 = NSMutableAttributedString(string: "Sem. 1", attributes: convertToOptionalNSAttributedStringKeyDictionary(attrs2))
                 sem1Button.setAttributedTitle(attribute2, for: .normal)
                 sem2Button.setAttributedTitle(attribute, for: .normal)
                 for i in 0..<sem2.count {
@@ -280,4 +280,15 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }
