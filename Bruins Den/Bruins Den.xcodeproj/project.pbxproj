@@ -189,6 +189,7 @@
 				2F3B342121AB3AE300502FC4 /* MyCherryCreekViewController.swift */,
 				47F2D1D31F1FA8B4000BE32E /* USJViewController.swift */,
 				47143B721F06C0F20055061C /* PowerschoolViewController.swift */,
+				4796B6441F818EA800C53A52 /* NotificationsViewController.swift */,
 				47F55E261F253DA9001F8695 /* Important Documents */,
 			);
 			name = Links;
@@ -310,7 +311,6 @@
 				47CC4EAB1EBAA29100510F77 /* Main.storyboard */,
 				47C805CA1F89979600468A9E /* NamesTableViewCell.swift */,
 				47C805C81F89976D00468A9E /* AboutAppViewController.swift */,
-				4796B6441F818EA800C53A52 /* NotificationsViewController.swift */,
 				4762368F1F80579E0016A981 /* CustomNavigationBar.swift */,
 				474113251F5BA6BD008599B9 /* Campus Maps */,
 				479470851F33C474003E05DE /* InitialViewController.swift */,

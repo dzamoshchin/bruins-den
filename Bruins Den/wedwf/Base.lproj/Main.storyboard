@@ -1377,6 +1377,7 @@
                         <segue destination="iQ2-q9-IXS" kind="show" identifier="toUSJ" id="nTV-7C-j6t"/>
                         <segue destination="0bO-5M-wcs" kind="show" identifier="toSenate" id="yk7-Nt-0bg"/>
                         <segue destination="1oM-iR-Ksc" kind="show" identifier="toDocuments" id="lLq-pB-VAo"/>
+                        <segue destination="Iub-jD-z4P" kind="show" identifier="toSettings" id="CQJ-G1-Re4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPE-jj-FFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2303,18 +2304,18 @@
                         <viewControllerLayoutGuide type="bottom" id="gVV-N1-hXb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="INf-jb-Dim">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCn-ZC-gj0">
-                                <rect key="frame" x="68" y="128" width="278" height="70"/>
+                                <rect key="frame" x="68" y="40" width="278" height="70"/>
                                 <string key="text">Listing of notifications is coming soon! Please turn on push-notifications for this app to receive CCHS notifications now on your device.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyW-xV-Z4T">
-                                <rect key="frame" x="143" y="223" width="128" height="30"/>
+                                <rect key="frame" x="143" y="135" width="128" height="30"/>
                                 <state key="normal" title="Allow Notifications"/>
                                 <connections>
                                     <action selector="prompt:" destination="Iub-jD-z4P" eventType="touchUpInside" id="hqE-uF-s3x"/>
@@ -2330,17 +2331,14 @@
                             <constraint firstItem="vCn-ZC-gj0" firstAttribute="leading" secondItem="INf-jb-Dim" secondAttribute="leadingMargin" constant="48" id="q5k-yW-Mip"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7UI-ye-2va">
-                        <barButtonItem key="leftBarButtonItem" image="Back Arrow" id="ccI-aV-eB9"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7UI-ye-2va"/>
                     <connections>
                         <outlet property="allowNotifications" destination="EyW-xV-Z4T" id="S1H-Ri-Lv7"/>
-                        <outlet property="revealButton" destination="ccI-aV-eB9" id="UrO-Tn-Qn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cne-BY-P3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10369" y="293"/>
+            <point key="canvasLocation" x="11746" y="-638"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cJY-1m-mJ6">
@@ -2802,9 +2800,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Iub-jD-z4P" kind="relationship" relationship="rootViewController" id="6NA-Rc-qq8"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBS-RU-AGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

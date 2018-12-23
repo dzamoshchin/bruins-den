@@ -20,7 +20,7 @@ class NotificationsViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
-        self.title = "Notifications"
+        self.title = "Settings"
         
         let noticationType = UIApplication.shared.currentUserNotificationSettings!.types
         if noticationType == [] { //no notifications
