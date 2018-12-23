@@ -100,7 +100,7 @@ extension Screen2ViewController: UICollectionViewDataSource, UICollectionViewDel
         } else if indexPath.row == 3 {
             
         } else if indexPath.row == 4 {
-            performSegue(withIdentifier: "toDocs", sender: self)
+            performSegue(withIdentifier: "toDocuments", sender: self)
         } else if indexPath.row == 5 {
             
         }

@@ -395,7 +395,6 @@
                         <outlet property="navBar" destination="Jax-ei-7GK" id="FdN-YH-Cvf"/>
                         <outlet property="versionLabel" destination="r2B-0P-C5B" id="fGm-zu-tM9"/>
                         <segue destination="9tg-E4-BAz" kind="custom" identifier="toCalendar" customClass="SWRevealViewControllerSeguePushController" id="MXA-by-tYo"/>
-                        <segue destination="pMF-DK-UFx" kind="custom" identifier="toDocuments" customClass="SWRevealViewControllerSeguePushController" id="kit-be-Huf"/>
                         <segue destination="5bf-xP-wGU" kind="custom" identifier="notifications" customClass="SWRevealViewControllerSeguePushController" id="j8U-Sw-ePy"/>
                     </connections>
                 </viewController>
@@ -453,18 +452,15 @@
                             <constraint firstItem="3TY-ar-SOi" firstAttribute="top" secondItem="1An-lv-8eK" secondAttribute="bottom" id="Xf6-Rg-exL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5qZ-dV-2M8">
-                        <barButtonItem key="leftBarButtonItem" image="Back Arrow" id="Sef-P3-mwK"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="5qZ-dV-2M8"/>
                     <connections>
-                        <outlet property="revealButton" destination="Sef-P3-mwK" id="Ceu-lG-UQZ"/>
                         <outlet property="tableView" destination="3TY-ar-SOi" id="iaM-8p-31G"/>
                         <segue destination="nLi-eg-u1T" kind="show" identifier="toDocs" id="70u-po-6Cu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FX2-mb-aUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11668" y="-638"/>
+            <point key="canvasLocation" x="12576.8115942029" y="-638.16964285714278"/>
         </scene>
         <!--Documents View Controller-->
         <scene sceneID="8aL-se-ePh">
@@ -478,26 +474,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6w-Gv-Y0L">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Dm-px-Qd6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i6w-Gv-Y0L" firstAttribute="centerY" secondItem="2Gq-Sg-vb9" secondAttribute="centerY" id="MPD-nX-gPr"/>
-                            <constraint firstItem="i6w-Gv-Y0L" firstAttribute="height" secondItem="2Gq-Sg-vb9" secondAttribute="height" id="Vgm-bS-O5K"/>
-                            <constraint firstItem="i6w-Gv-Y0L" firstAttribute="width" secondItem="2Gq-Sg-vb9" secondAttribute="width" id="f0n-Nq-lBN"/>
-                            <constraint firstItem="i6w-Gv-Y0L" firstAttribute="centerX" secondItem="2Gq-Sg-vb9" secondAttribute="centerX" id="ohA-Vc-JIE"/>
+                            <constraint firstItem="5Dm-px-Qd6" firstAttribute="top" secondItem="nI3-pf-7oZ" secondAttribute="bottom" id="86h-EJ-qQc"/>
+                            <constraint firstAttribute="bottom" secondItem="5Dm-px-Qd6" secondAttribute="bottom" id="CnN-eH-AC6"/>
+                            <constraint firstItem="5Dm-px-Qd6" firstAttribute="leading" secondItem="2Gq-Sg-vb9" secondAttribute="leading" id="Qlz-fU-qc7"/>
+                            <constraint firstAttribute="trailing" secondItem="5Dm-px-Qd6" secondAttribute="trailing" id="YFc-xH-H6a"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="i6w-Gv-Y0L" id="PWh-fS-Wop"/>
+                        <outlet property="webKit" destination="5Dm-px-Qd6" id="PcL-5X-Cfo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss8-gl-bHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12523" y="167"/>
+            <point key="canvasLocation" x="12521.739130434784" y="166.74107142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1232,7 +1232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wa-of-nIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12523.188405797102" y="-637.5"/>
+            <point key="canvasLocation" x="13433.333333333334" y="-637.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BRQ-vM-IS6">
@@ -1266,7 +1266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhU-f2-pja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14038" y="-637"/>
+            <point key="canvasLocation" x="14947.826086956524" y="-637.5"/>
         </scene>
         <!--Senate View Controller-->
         <scene sceneID="rxp-cA-sT8">
@@ -1303,7 +1303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0x-d2-HOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13285.507246376812" y="-637.5"/>
+            <point key="canvasLocation" x="14195.652173913044" y="-637.5"/>
         </scene>
         <!--Screen2 View Controller-->
         <scene sceneID="zXJ-xI-XfS">
@@ -1376,7 +1376,7 @@
                         <segue destination="MKA-ee-MvZ" kind="show" identifier="toPower" id="8uh-Lu-vgF"/>
                         <segue destination="iQ2-q9-IXS" kind="show" identifier="toUSJ" id="nTV-7C-j6t"/>
                         <segue destination="0bO-5M-wcs" kind="show" identifier="toSenate" id="yk7-Nt-0bg"/>
-                        <segue destination="1oM-iR-Ksc" kind="show" identifier="toDocs" id="Bgq-uZ-eJS"/>
+                        <segue destination="1oM-iR-Ksc" kind="show" identifier="toDocuments" id="lLq-pB-VAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPE-jj-FFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1456,7 +1456,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="g5x-cX-doQ" kind="relationship" relationship="rootViewController" id="GIu-Y5-nB7"/>
+                        <segue destination="g5x-cX-doQ" kind="relationship" relationship="rootViewController" id="r9a-Dd-wBW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAi-7F-Oih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2292,7 +2292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45O-2n-bft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16658" y="-252"/>
+            <point key="canvasLocation" x="17568.115942028988" y="-252.45535714285714"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="vCM-O3-LK4">

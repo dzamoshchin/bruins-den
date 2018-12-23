@@ -21,9 +21,8 @@ class PowerschoolViewController: UIViewController, WKNavigationDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         webView.navigationDelegate = self
- self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
+        self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.title = "PowerSchool"
         
         let url = URL(string: "https://powerschool.cherrycreekschools.org/public/")!
@@ -42,7 +41,6 @@ class PowerschoolViewController: UIViewController, WKNavigationDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)

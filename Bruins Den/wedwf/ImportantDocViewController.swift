@@ -16,7 +16,6 @@ class ImportantDocViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var revealButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
@@ -31,9 +30,8 @@ class ImportantDocViewController: UIViewController, UITableViewDelegate, UITable
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
