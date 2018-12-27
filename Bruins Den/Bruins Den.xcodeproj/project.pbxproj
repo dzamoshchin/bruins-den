@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F2FFE0C219B2A1B0034F342 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D5B70E1F63904700646D95 /* GoogleService-Info.plist */; };
+		2F308CD021D4139C007CAE84 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F308CCF21D4139C007CAE84 /* FinalViewController.swift */; };
 		2F3B341C21AB2D2800502FC4 /* RegistrationGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */; };
 		2F3B341D21AB2D2800502FC4 /* BearFacts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F3B341A21AB2D2700502FC4 /* BearFacts.pdf */; };
 		2F3B341E21AB2D2800502FC4 /* MasterSchedule.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F3B341B21AB2D2800502FC4 /* MasterSchedule.pdf */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		2E4632EF03A24B2BE06A7A5C /* Pods-Bruins Den.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bruins Den.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den.debug.xcconfig"; sourceTree = "<group>"; };
+		2F308CCF21D4139C007CAE84 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RegistrationGuide.pdf; sourceTree = "<group>"; };
 		2F3B341A21AB2D2700502FC4 /* BearFacts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BearFacts.pdf; sourceTree = "<group>"; };
 		2F3B341B21AB2D2800502FC4 /* MasterSchedule.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MasterSchedule.pdf; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				47C9142E1F2694DA003D5313 /* DetailScheduleViewController.swift */,
 				47C9142C1F2693D5003D5313 /* ScheduleTableViewCell.swift */,
 				47903F921F04134F003FD5C2 /* ScheduleViewController.swift */,
+				2F308CCF21D4139C007CAE84 /* FinalViewController.swift */,
 			);
 			name = "Bell Schedule";
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				47F55E211F253A48001F8695 /* DocTableViewCell.swift in Sources */,
 				47FBCF681EF1CD4A00404953 /* SideBarViewController.swift in Sources */,
 				47A5F1211F28309B00890990 /* SeasonsViewController.swift in Sources */,
+				2F308CD021D4139C007CAE84 /* FinalViewController.swift in Sources */,
 				406CB490219C730800E70118 /* SubSportsTableViewController.swift in Sources */,
 				47D934881F241ADB005037B0 /* DocumentsViewController.swift in Sources */,
 				47C9142F1F2694DA003D5313 /* DetailScheduleViewController.swift in Sources */,

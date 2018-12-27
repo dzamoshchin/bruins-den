@@ -178,36 +178,19 @@ class ViewController: UIViewController {
         //label.addSubview(test)
         //
         //self.navigationController?.navigationBar.addSubview(label)
-        
-        print(self.navigationItem.titleView?.frame.size.height)
-        
-        
-        
-        
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         self.navigationItem.titleView?.sizeToFit()
         let b = navigationItem.titleView?.frame
-        print(self.navigationItem.titleView?.frame.size.height)
         self.navigationItem.titleView?.frame = CGRect(x: (b?.origin.x)!, y: (b?.origin.y)!, width: (b?.size.width)!, height: 200)
         let bar = navigationController?.navigationBar
         bar?.setNeedsLayout()
         bar?.layoutIfNeeded()
         bar?.setNeedsDisplay()
-        print(self.navigationItem.titleView?.frame.size.height)
-        
-        
-        
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -219,6 +202,7 @@ class ViewController: UIViewController {
         
        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
+    
     @objc internal func updateTimer() {
         if updateCounter <= 1 {
             let rightOffset = CGPoint(x: scrollView.contentOffset.x + scrollView.frame.size.width, y: 0)
@@ -229,12 +213,9 @@ class ViewController: UIViewController {
         } else {
             updateCounter = 0
             scrollView.setContentOffset(CGPoint.zero, animated: true)
-            
         }
-
     }
   
-    
     func addLine(_ start: CGPoint, _ end:CGPoint) {
         let line = CAShapeLayer()
         let linePath = UIBezierPath()
@@ -246,10 +227,7 @@ class ViewController: UIViewController {
         line.lineJoin = CAShapeLayerLineJoin.round
         self.view.layer.addSublayer(line)
     }
-
-
 }
-
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {

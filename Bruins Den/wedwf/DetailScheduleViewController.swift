@@ -17,7 +17,18 @@ class DetailScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.imageView.translatesAutoresizingMaskIntoConstraints = true
-        self.title = "Bell Schedule"
+        print("Type")
+        print(type)
+        switch(type){
+        case 0:
+            self.title = "Regular School Day"
+        case 1:
+            self.title = "Storm Delay Schedule"
+        case 2:
+            self.title = "Assembly"
+        default:
+            self.title = "Final Exams"
+        }
         // Do any additional setup after loading the view.
     }
 

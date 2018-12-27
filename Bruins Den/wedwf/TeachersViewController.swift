@@ -82,12 +82,18 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
             return range != nil
         }))
         searchActive2 = true
-        if searchText.characters.count != 0 {
+        if searchText.count != 0 {
             emptySearch2 = false
         } else {
             emptySearch2 = true
         }
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     

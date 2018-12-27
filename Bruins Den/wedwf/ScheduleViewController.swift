@@ -47,6 +47,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ScheduleTableViewCell else {
             fatalError("The dequeued cell is not an instance of ScheduleTableViewCell.")
         }
+
         if indexPath.row == 0{
             cell.name.text = "Regular School Day"
         } else if indexPath.row == 1 {
@@ -66,7 +67,12 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "toDetailSchedule", sender: indexPath.row)
+        if(indexPath.row <= 2) {
+            performSegue(withIdentifier: "toDetailSchedule", sender: indexPath.row)
+        } else {
+            performSegue(withIdentifier: "toFinals", sender: nil)
+
+        }
     }
     
 

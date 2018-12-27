@@ -7,25 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
 class USJViewController: UIViewController {
 
     
+    @IBOutlet weak var webView: WKWebView!
     
-    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        //self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TopNavBarBackground2"), for: .default)
-        //navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         self.title = "USJ"
-        webView.loadRequest(NSURLRequest(url: NSURL(string: "http://unionstreetjournal.com/")! as URL) as URLRequest)
-
+        
+        let url = URL(string: "http://unionstreetjournal.com/")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,12 +35,11 @@ class USJViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewWillDisappear(animated)
     }
     
 

@@ -3,6 +3,7 @@
 //  Bruins Den
 //
 //  Created by hari sowrirajan on 7/24/17.
+//  Updated by Daniel Zamoshchina and Siddarth Ijju on 12/26/18.
 //  Copyright © 2017 hari sowrirajan. All rights reserved.
 //
 
@@ -18,14 +19,15 @@ class BellScreenContainerViewController: UIViewController {
     //@IBOutlet weak var imageview: UIImageView!
     
     override func viewDidLoad() {
+        self.parent
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        
         self.navigationController?.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         addPeriods()
         var scheduleTimes = [String]()
+        print("SC")
         print(sc)
         switch(sc){
             case 0:
@@ -42,7 +44,6 @@ class BellScreenContainerViewController: UIViewController {
                 scheduleTimes = ["8:20 - 9:12", "9:19 - 10:06", "10:13 - 11:00", "11:07 - 11:54", "12:01 - 12:48", "12:55 - 1:42", "1:49 - 2:36", "2:43 - 3:30"]
         }
         addTimes(scheduleTimes)
-        // Do any additional setup after loading the view.
     }
     
     func addPeriods(){

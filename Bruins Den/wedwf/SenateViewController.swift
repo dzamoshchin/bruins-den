@@ -40,10 +40,8 @@ class SenateViewController: UIViewController, WKNavigationDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
 

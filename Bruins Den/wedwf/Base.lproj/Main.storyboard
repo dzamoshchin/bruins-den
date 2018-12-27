@@ -1038,6 +1038,7 @@
                     <connections>
                         <outlet property="tableView" destination="eay-or-J8W" id="dDh-Vs-rfl"/>
                         <segue destination="vYe-6F-T62" kind="show" identifier="toDetailSchedule" id="BGR-0u-DOe"/>
+                        <segue destination="34o-XC-yyc" kind="show" identifier="toFinals" id="EGs-ZD-QSr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIa-zH-dH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1246,22 +1247,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qku-KW-3Hv">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-fY-xwh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qku-KW-3Hv" firstAttribute="width" secondItem="lWs-gj-m55" secondAttribute="width" id="9Uv-K8-mXd"/>
-                            <constraint firstItem="Qku-KW-3Hv" firstAttribute="centerY" secondItem="lWs-gj-m55" secondAttribute="centerY" id="f1v-Je-Boj"/>
-                            <constraint firstItem="Qku-KW-3Hv" firstAttribute="centerX" secondItem="lWs-gj-m55" secondAttribute="centerX" id="oCt-EF-2gf"/>
-                            <constraint firstItem="Qku-KW-3Hv" firstAttribute="height" secondItem="lWs-gj-m55" secondAttribute="height" id="wGc-l7-Glj"/>
+                            <constraint firstItem="NWq-fY-xwh" firstAttribute="leading" secondItem="lWs-gj-m55" secondAttribute="leading" id="2rP-3t-f6l"/>
+                            <constraint firstAttribute="bottom" secondItem="NWq-fY-xwh" secondAttribute="bottom" id="jbf-eC-G5F"/>
+                            <constraint firstItem="NWq-fY-xwh" firstAttribute="top" secondItem="wTW-tQ-3Bj" secondAttribute="bottom" id="uGJ-8Q-BR5"/>
+                            <constraint firstAttribute="trailing" secondItem="NWq-fY-xwh" secondAttribute="trailing" id="zD3-SO-vMR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Qku-KW-3Hv" id="Uw1-mD-dBQ"/>
+                        <outlet property="webView" destination="NWq-fY-xwh" id="Leu-gi-6cF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhU-f2-pja" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2307,9 +2311,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCn-ZC-gj0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications are coming soon! Please turn on push notifications for this app to receive CCHS notifications on your device." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCn-ZC-gj0">
                                 <rect key="frame" x="68" y="40" width="278" height="70"/>
-                                <string key="text">Listing of notifications is coming soon! Please turn on push-notifications for this app to receive CCHS notifications now on your device.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2411,6 +2414,44 @@
             </objects>
             <point key="canvasLocation" x="15489" y="2608"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="KKD-ez-gkT">
+            <objects>
+                <viewController id="1nz-23-kDl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3L-mp-RQg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7U4-tl-qmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdg-pH-Sfk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="jQL-o9-18T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpY-JD-Jc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17102" y="2521"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="v4e-9z-wKz">
+            <objects>
+                <viewController id="fmK-og-GsY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qUY-kM-noC"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOK-ky-aYg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aft-Gq-Lqq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="iQM-He-RRF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfL-b4-juJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17102" y="1872"/>
+        </scene>
         <!--Detail Athletics View Controller-->
         <scene sceneID="7qK-gq-a2Z">
             <objects>
@@ -2495,6 +2536,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pt-1B-XOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15489" y="3376"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="2lD-Ke-teO">
+            <objects>
+                <viewController id="34o-XC-yyc" customClass="FinalViewController" customModule="Bruins_Den" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i9c-A7-7yB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ElM-sq-uyJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJ8-c8-9Ny">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-TM-f1x">
+                                <rect key="frame" x="86" y="20" width="243" height="29"/>
+                                <segments>
+                                    <segment title="First Semester"/>
+                                    <segment title="Second Semester"/>
+                                </segments>
+                                <connections>
+                                    <action selector="action:" destination="34o-XC-yyc" eventType="valueChanged" id="qRT-ET-i7z"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YCQ-TM-f1x" firstAttribute="top" secondItem="i9c-A7-7yB" secondAttribute="bottom" constant="20" id="JAe-UT-eWg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YCQ-TM-f1x" secondAttribute="trailing" constant="65" id="bmp-Zb-WEv"/>
+                            <constraint firstItem="YCQ-TM-f1x" firstAttribute="leading" secondItem="LJ8-c8-9Ny" secondAttribute="leadingMargin" constant="66" id="iKm-3J-LkN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tab" destination="YCQ-TM-f1x" id="fCO-Pn-OCz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQf-X9-Rk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13952" y="1872"/>
         </scene>
         <!--Bell Screen Container View Controller-->
         <scene sceneID="Ayt-cD-vIP">
