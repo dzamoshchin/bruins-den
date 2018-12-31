@@ -10,7 +10,6 @@ import Foundation
 
 class Event: NSObject, NSCopying, NSCoding  {
     
-    
     var title : String
     var message : String
     var hour : Int
@@ -20,6 +19,7 @@ class Event: NSObject, NSCopying, NSCoding  {
     var location = ""
     var startDate = DateComponents()
     var lastDay : String?
+    
     init(_ t : String, _ m : String, _ time : String) {
         title = t
         message = m
@@ -27,10 +27,6 @@ class Event: NSObject, NSCopying, NSCoding  {
         hour = Int(timeArr[0])!
         minute = Int(timeArr[1])!
         AM = timeArr[2]
-        
-        
-        
-        
     }
     
     func encode(with aCoder: NSCoder) {
@@ -55,8 +51,8 @@ class Event: NSObject, NSCopying, NSCoding  {
         location = aDecoder.decodeObject(forKey: "location") as! String
         startDate = aDecoder.decodeObject(forKey: "start") as! DateComponents
         lastDay = aDecoder.decodeObject(forKey: "last") as? String
-        
     }
+    
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = Event(title, message, "12 00 AM")
         copy.hour = hour

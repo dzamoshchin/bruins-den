@@ -185,6 +185,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0729D421D9AF3600D92AEB /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				47808BDF1EFECDC500B68258 /* EventTableViewCell.swift */,
+				47B0D9E31EF4414E00549555 /* EventDate.swift */,
+				47B0D9E51EF4421700549555 /* Event.swift */,
+				4701ED251EF3025000481B14 /* CalendarViewController.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		2F3B342021AB393300502FC4 /* Links */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,10 +335,7 @@
 				2F3B342021AB393300502FC4 /* Links */,
 				473169121F32452100E36B1A /* Announcements */,
 				4743BD3F1F1D2ABD00D7A6A0 /* TestViewController.swift */,
-				47808BDF1EFECDC500B68258 /* EventTableViewCell.swift */,
-				47B0D9E31EF4414E00549555 /* EventDate.swift */,
-				47B0D9E51EF4421700549555 /* Event.swift */,
-				4701ED251EF3025000481B14 /* CalendarViewController.swift */,
+				2F0729D421D9AF3600D92AEB /* Calendar */,
 				47DFDD091EE1DB9800EBAF6A /* SideBarTableViewCell.swift */,
 				47DFDD071EE1DB8800EBAF6A /* SideBarTableViewController.swift */,
 				47F55E201F253A48001F8695 /* DocTableViewCell.swift */,
@@ -494,6 +502,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DownPicker/DownPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -505,6 +515,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DownPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",

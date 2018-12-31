@@ -6,7 +6,7 @@ target 'Bruins Den' do
   use_frameworks!
 
   # Pods for Bruins Den
-  #pod 'FSCalendar'
+  pod 'FSCalendar'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod ‘Firebase/Storage’
@@ -15,9 +15,9 @@ target 'Bruins Den' do
   pod 'TwitterKit'
   pod 'Alamofire', '~> 4.4'
   #pod 'Kanna', '~> 2.1.0'
-  pod “DownPicker”
+  pod 'FeedKit', '~> 8.0'  
+  pod 'DownPicker'
   #pod 'skpsmtpmessage'
   #pod 'AZDropdownMenu'
-
 
 end
