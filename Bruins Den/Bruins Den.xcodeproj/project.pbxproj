@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0729DB21DB086000D92AEB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0729D921DB086000D92AEB /* SettingsViewController.swift */; };
+		2F0729DC21DB086000D92AEB /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */; };
 		2F2FFE0C219B2A1B0034F342 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D5B70E1F63904700646D95 /* GoogleService-Info.plist */; };
 		2F308CD021D4139C007CAE84 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F308CCF21D4139C007CAE84 /* FinalViewController.swift */; };
 		2F3B341C21AB2D2800502FC4 /* RegistrationGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */; };
@@ -46,7 +48,6 @@
 		4784C7981F2C2DB7006274FE /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784C7971F2C2DB7006274FE /* ContactViewController.swift */; };
 		47903F931F04134F003FD5C2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47903F921F04134F003FD5C2 /* ScheduleViewController.swift */; };
 		479470861F33C474003E05DE /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479470851F33C474003E05DE /* InitialViewController.swift */; };
-		4796B6451F818EA800C53A52 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4796B6441F818EA800C53A52 /* NotificationsViewController.swift */; };
 		4796B6471F8198EC00C53A52 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4796B6461F8198EC00C53A52 /* ChannelViewController.swift */; };
 		47A394CA1F114EC3003BA501 /* AthleticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A394C91F114EC3003BA501 /* AthleticsViewController.swift */; };
 		47A394CD1F114FDB003BA501 /* AthleticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A394CC1F114FDB003BA501 /* AthleticsTableViewCell.swift */; };
@@ -88,6 +89,8 @@
 
 /* Begin PBXFileReference section */
 		2E4632EF03A24B2BE06A7A5C /* Pods-Bruins Den.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bruins Den.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den.debug.xcconfig"; sourceTree = "<group>"; };
+		2F0729D921DB086000D92AEB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		2F308CCF21D4139C007CAE84 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RegistrationGuide.pdf; sourceTree = "<group>"; };
 		2F3B341A21AB2D2700502FC4 /* BearFacts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BearFacts.pdf; sourceTree = "<group>"; };
@@ -133,7 +136,6 @@
 		4784C7971F2C2DB7006274FE /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		47903F921F04134F003FD5C2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		479470851F33C474003E05DE /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		4796B6441F818EA800C53A52 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		4796B6461F8198EC00C53A52 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		47A394C91F114EC3003BA501 /* AthleticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleticsViewController.swift; sourceTree = "<group>"; };
 		47A394CC1F114FDB003BA501 /* AthleticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleticsTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,13 +198,21 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		2F0729DD21DB086F00D92AEB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */,
+				2F0729D921DB086000D92AEB /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		2F3B342021AB393300502FC4 /* Links */ = {
 			isa = PBXGroup;
 			children = (
 				2F3B342121AB3AE300502FC4 /* MyCherryCreekViewController.swift */,
 				47F2D1D31F1FA8B4000BE32E /* USJViewController.swift */,
 				47143B721F06C0F20055061C /* PowerschoolViewController.swift */,
-				4796B6441F818EA800C53A52 /* NotificationsViewController.swift */,
 				47F55E261F253DA9001F8695 /* Important Documents */,
 			);
 			name = Links;
@@ -348,6 +358,7 @@
 				47A3AA7C1EE0ABEF00565A3E /* MenuButton.swift */,
 				474BFF0B1EBD3D0900B3A27A /* InterViewController.swift */,
 				7A7F6B021F34E2B5006022B6 /* Club */,
+				2F0729DD21DB086F00D92AEB /* Settings */,
 				47CC4EAE1EBAA29100510F77 /* Assets.xcassets */,
 				47CC4EB01EBAA29100510F77 /* LaunchScreen.storyboard */,
 				47CC4EB31EBAA29100510F77 /* Info.plist */,
@@ -500,7 +511,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DownPicker/DownPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
@@ -513,7 +523,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DownPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
@@ -557,11 +566,11 @@
 				4743BD401F1D2ABD00D7A6A0 /* TestViewController.swift in Sources */,
 				4755D0C11F0C0BB6005D394B /* Department.swift in Sources */,
 				47C9142D1F2693D5003D5313 /* ScheduleTableViewCell.swift in Sources */,
-				4796B6451F818EA800C53A52 /* NotificationsViewController.swift in Sources */,
 				479470861F33C474003E05DE /* InitialViewController.swift in Sources */,
 				7A7F6B011F34E1FA006022B6 /* Club.swift in Sources */,
 				47FBCF611EF1CD4A00404953 /* AppDelegate.swift in Sources */,
 				2F3B342221AB3AE400502FC4 /* MyCherryCreekViewController.swift in Sources */,
+				2F0729DB21DB086000D92AEB /* SettingsViewController.swift in Sources */,
 				47A394CD1F114FDB003BA501 /* AthleticsTableViewCell.swift in Sources */,
 				47A5F1291F2837D700890990 /* Sport.swift in Sources */,
 				4755402A1F21082000B028A0 /* EventViewController.swift in Sources */,
@@ -609,6 +618,7 @@
 				4784C7981F2C2DB7006274FE /* ContactViewController.swift in Sources */,
 				47F2D1D41F1FA8B4000BE32E /* USJViewController.swift in Sources */,
 				47FBCF6C1EF1CD4A00404953 /* MenuButton.swift in Sources */,
+				2F0729DC21DB086000D92AEB /* NotificationsViewController.swift in Sources */,
 				471A54731F26A89A00AB21FE /* BellScreenContainerViewController.swift in Sources */,
 				47A5F1271F28376300890990 /* SubSportsTableViewCell.swift in Sources */,
 				47C805CB1F89979600468A9E /* NamesTableViewCell.swift in Sources */,

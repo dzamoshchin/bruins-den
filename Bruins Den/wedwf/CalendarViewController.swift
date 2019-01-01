@@ -2,13 +2,12 @@
 //  CalendarViewController.swift
 //  Bruins Den
 //
-//  Created by hari sowrirajan on 6/15/17.
-//  Copyright © 2017 hari sowrirajan. All rights reserved.
+//  Created by Daniel Zamoshchin on 12/31/18.
+//  Copyright © 2017 Daniel Zamoshchin. All rights reserved.
 //
 
 import UIKit
 import FSCalendar
-import Alamofire
 import Darwin
 import FeedKit
 
@@ -242,16 +241,9 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         dateComp.day = Int(timeArr[2])!
         return dateComp
     }
-    
 
-    //We need to figure out how to efficiently parse - maybe we should only consider events by month, and only scrape the rest if the user navigates to other months
-    //some indices are hard coded - be careful (since we're assuming that description or end time will always have the same length
     //Watch out for duplicate timings! - what if something's start time == another's end time, like afterprom?
-    //We've fixed the above using the varaible leftOffIndex
     func parseRSS() {
-        var count = 0
-        print("parse HTML")
-        
         let feedURL = URL(string: "http://cherrycreek.cherrycreekschools.org/_layouts/15/listfeed.aspx?List=%7B9CE5158B-4A2D-4B34-B16E-1B1FD2A169B7%7D&Source=http%3A%2F%2Fcherrycreek%2Echerrycreekschools%2Eorg%2FLists%2FSchoolEvents%2Fcalendar%2Easpx")!
         let parser = FeedParser(URL: feedURL)
         parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
@@ -320,153 +312,6 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
 //            UserDefaults.standard.set(encodedData, forKey: "events")
             self.alert.dismiss(withClickedButtonIndex: -1, animated: true)
         }
-
-//        if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-//            if let total = doc.text {
-//                //print(doc.text!)
-//                var leftOffIndex = total.startIndex
-//
-//
-//                var previous = ""
-//                var eventDateIndex = -1
-//                var eventIndex = -1
-//                for show in doc.css("div") {
-//                    var datecomp1 = DateComponents()
-//                    var startTime = ""
-//
-//                    var endTime = ""
-//
-//                    let this = show.text!
-//                    var datecomp = DateComponents()
-//                    if this.hasPrefix("Description:") {
-//                        let index = this.index(this.startIndex, offsetBy: 13)
-//                        var desc = this.substring(from: index)
-//                        //removes \n, spaces
-//                        desc = String(desc.characters.filter { !" \n\t\r".characters.contains($0) })
-//                        events[eventDateIndex].event[eventIndex].message = desc
-//                    }
-//                    else if this.hasPrefix("End Time") {
-//                        let needle: Character = ":"
-//                        var boolean = false //if we perform the if loop below
-//                        if previous.hasPrefix("Start Time") {
-//                            count += 1
-//
-//                            let index = this.index(this.startIndex, offsetBy: 12)
-//                            let s = previous.substring(from: index)
-//                            parseDateTime(str: s, d: &datecomp, start: &startTime)
-//                            var eventDate = EventDate(datecomp)
-//                            datecomp1.day = datecomp.day
-//                            datecomp1.year = datecomp.year
-//                            datecomp1.month = datecomp.month
-//                            if let ind = self.events.index(of: eventDate) {
-//                                eventDateIndex = ind
-//                            } else {
-//                                self.events.append(eventDate)
-//                                eventDateIndex = self.events.count - 1
-//                            }
-//                            boolean = true
-//                        }
-//
-//                        //var datecomp = DateComponents()
-//                        let index = this.index(this.startIndex, offsetBy: 10)
-//                        let info = this.substring(from: index)
-//                        parseDateTime(str: info, d: &datecomp, start: &endTime)
-//
-//                        endTime = info
-//
-//                        if let indexOf = total.range(of: endTime, range: leftOffIndex..<total.endIndex)?.lowerBound {
-//                            if(!boolean) { //Start time == end time or its not there for some reason
-//                                //startTime = endTime
-//                                let startIndex = total.range(of: "Start Time: ", options: .backwards, range: leftOffIndex..<indexOf)?.upperBound
-//
-//                                parseDateTime(str: total.substring(with: startIndex!..<indexOf), d: &datecomp, start: &startTime)
-//                                var eventDate = EventDate(datecomp)
-//                                if let ind = self.events.index(of: eventDate) {
-//                                    eventDateIndex = ind
-//                                } else {
-//                                    self.events.append(eventDate)
-//                                    eventDateIndex = self.events.count - 1
-//                                }
-//                                //leftOffIndex = (total.range(of: endTime, range: leftOffIndex..<total.endIndex)?.upperBound)!
-//                                //for end time we just want the whole string, not any specific info
-//                            }
-//                            leftOffIndex = (total.range(of: endTime, range: leftOffIndex..<total.endIndex)?.upperBound)!
-//                            //let intValue = total.distance(from: total.startIndex, to: indexOf)
-//                            let htmlIndex = total.range(of: "http", options: .backwards, range: total.startIndex..<indexOf)?.lowerBound
-//                            var startPoint = total.distance(from: total.startIndex, to: htmlIndex!)
-//                            startPoint = startPoint - 1
-//                            var execute = true
-//                            while(execute) {
-//                                let index = total.index(total.startIndex, offsetBy: startPoint)
-//                                if total[index] != " " {
-//                                    execute = false
-//                                    break
-//                                }
-//                                startPoint = startPoint - 1
-//                            }
-//                            startPoint = startPoint + 1 //we want the first index after the title
-//                            let endIndex = total.characters.index(total.startIndex, offsetBy: startPoint)
-//                            let firstIndex = total.range(of: "   ", options: .backwards, range: total.startIndex..<endIndex)?.upperBound
-//                            //FINALLY!!!
-//                            let range = firstIndex!..<endIndex
-//                            let eventTitle = total.substring(with: range)
-//
-//                            //Check if there is a location
-//                            let rangeForLocation = firstIndex!..<indexOf
-//                            let eventWithLocation = total.substring(with: rangeForLocation)
-//                            var loc = ""
-//                            if let loc1 = total.range(of: "Location: ", range: rangeForLocation) {
-//                                let locationIndex = loc1.upperBound
-//                                let end = total.range(of: "Start", range: rangeForLocation)?.lowerBound
-//                                loc = total.substring(with: locationIndex..<end!)
-//                            }
-//                            //Create the event
-//                            let ev = Event(eventTitle, "", startTime)
-//                            ev.endTime = endTime
-//                            if boolean {
-//                                ev.startDate = datecomp1
-//                            }else{
-//                                ev.startDate = datecomp
-//                            }
-//                            ev.location = loc
-//                            self.events[eventDateIndex].event.append(ev)
-//                            eventIndex = self.events[eventDateIndex].event.count - 1
-//                            print("here we are" + startTime + " " + endTime)
-//                            //print("description" + description)
-//
-//                        }
-//
-//
-//
-//
-//
-//
-//                    }
-//                    //print(show.text)
-//                    previous = show.text!
-//                }
-//            }
-//
-//        }
-//        //print(count)
-//
-//        addMultiEvents()
-//        loadDatesWithEvents()
-//        sortEvents()
-//        calendar.reloadData()
-//        print(events)
-//        print("ok")
-//        UserDefaults.standard.set(datesWithEvent, forKey: "dates")
-//        let dddd = Date()
-//        UserDefaults.standard.set(dddd, forKey: "lastLoad")
-//        print("ok1")
-//        let encodedData = NSKeyedArchiver.archivedData(withRootObject: events)
-//
-//        UserDefaults.standard.set(encodedData, forKey: "events")
-//        print("ok2")
-//
-//        alert.dismiss(withClickedButtonIndex: -1, animated: true)
-
     }
 
     //str: "mm/dd/yyyy 88:88 AM"
