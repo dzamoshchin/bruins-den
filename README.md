@@ -10,7 +10,7 @@ It improves on the usability, appearance, and functionality of the previous vers
 - [ ] Update finals schedule
 - [x] Remove side menu
 - [x] Update faculty images
-- [ ] Add new sliding images
+- [x] Add new sliding images
 - [x] Fix master calendar
 
 ## This project is maintained by:
