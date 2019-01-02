@@ -70,8 +70,6 @@
 		47F55E211F253A48001F8695 /* DocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55E201F253A48001F8695 /* DocTableViewCell.swift */; };
 		47FBCF611EF1CD4A00404953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC4EA71EBAA29100510F77 /* AppDelegate.swift */; };
 		47FBCF621EF1CD4A00404953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC4EA91EBAA29100510F77 /* ViewController.swift */; };
-		47FBCF641EF1CD4A00404953 /* SideBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFDD091EE1DB9800EBAF6A /* SideBarTableViewCell.swift */; };
-		47FBCF651EF1CD4A00404953 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFDD071EE1DB8800EBAF6A /* SideBarTableViewController.swift */; };
 		47FBCF661EF1CD4A00404953 /* Menu2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A3AA7E1EE0CD9600565A3E /* Menu2CollectionViewCell.swift */; };
 		47FBCF671EF1CD4A00404953 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A3AA7A1EE0AAED00565A3E /* MenuCollectionViewCell.swift */; };
 		47FBCF681EF1CD4A00404953 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474BFF171EBD5B4700B3A27A /* SideBarViewController.swift */; };
@@ -163,8 +161,6 @@
 		47D5B7101F63908C00646D95 /* Bruins Den.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bruins Den.entitlements"; sourceTree = SOURCE_ROOT; };
 		47D934871F241ADB005037B0 /* DocumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		47D9348B1F241D2B005037B0 /* ImportantDocViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantDocViewController.swift; sourceTree = "<group>"; };
-		47DFDD071EE1DB8800EBAF6A /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
-		47DFDD091EE1DB9800EBAF6A /* SideBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewCell.swift; sourceTree = "<group>"; };
 		47F2D1D31F1FA8B4000BE32E /* USJViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USJViewController.swift; sourceTree = "<group>"; };
 		47F55E201F253A48001F8695 /* DocTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocTableViewCell.swift; sourceTree = "<group>"; };
 		5F907E4A4FD212322D38AF61 /* Pods_Bruins_Den.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bruins_Den.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,9 +342,6 @@
 				473169121F32452100E36B1A /* Announcements */,
 				4743BD3F1F1D2ABD00D7A6A0 /* TestViewController.swift */,
 				2F0729D421D9AF3600D92AEB /* Calendar */,
-				47DFDD091EE1DB9800EBAF6A /* SideBarTableViewCell.swift */,
-				47DFDD071EE1DB8800EBAF6A /* SideBarTableViewController.swift */,
-				47F55E201F253A48001F8695 /* DocTableViewCell.swift */,
 				47A3AA7E1EE0CD9600565A3E /* Menu2CollectionViewCell.swift */,
 				47A3AA7A1EE0AAED00565A3E /* MenuCollectionViewCell.swift */,
 				474BFF171EBD5B4700B3A27A /* SideBarViewController.swift */,
@@ -376,6 +369,7 @@
 				2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */,
 				47D9348B1F241D2B005037B0 /* ImportantDocViewController.swift */,
 				47D934871F241ADB005037B0 /* DocumentsViewController.swift */,
+				47F55E201F253A48001F8695 /* DocTableViewCell.swift */,
 			);
 			name = "Important Documents";
 			sourceTree = "<group>";
@@ -577,14 +571,12 @@
 				471CAEF51F12997A00BB0125 /* TwitterViewController.swift in Sources */,
 				47800D2E1F2900DE00231A3F /* DetailAthleticsViewController.swift in Sources */,
 				47FBCF621EF1CD4A00404953 /* ViewController.swift in Sources */,
-				47FBCF641EF1CD4A00404953 /* SideBarTableViewCell.swift in Sources */,
 				47B0D9E41EF4414E00549555 /* EventDate.swift in Sources */,
 				4755D0BB1F0C0B70005D394B /* MyTeachersViewController.swift in Sources */,
 				47C805C91F89976D00468A9E /* AboutAppViewController.swift in Sources */,
 				474113221F5B9F18008599B9 /* MapsViewController.swift in Sources */,
 				4796B6471F8198EC00C53A52 /* ChannelViewController.swift in Sources */,
 				4755D0B91F0C0B52005D394B /* TeachersViewController.swift in Sources */,
-				47FBCF651EF1CD4A00404953 /* SideBarTableViewController.swift in Sources */,
 				47FBCF661EF1CD4A00404953 /* Menu2CollectionViewCell.swift in Sources */,
 				7A7F6B001F34E1FA006022B6 /* ClubProfileViewController.swift in Sources */,
 				47FBCF671EF1CD4A00404953 /* MenuCollectionViewCell.swift in Sources */,
