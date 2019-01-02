@@ -8,14 +8,12 @@ It improves on the usability, appearance, and functionality of the previous vers
 - [ ] Update teacher schedules
 - [x] Update bell schedule
 - [ ] Update finals schedule
-- [ ] Remove side menu
+- [x] Remove side menu
 - [x] Update faculty images
-- [ ] Add new sliding images 
-- [ ] Fix master calendar
+- [ ] Add new sliding images
+- [x] Fix master calendar
 
 ## This project is maintained by:
 * Daniel Zamoshchin
 * Siddarth Ijju
 * Krithik Ramesh
-
-

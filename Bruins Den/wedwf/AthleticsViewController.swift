@@ -8,11 +8,12 @@
 
 import UIKit
 import TwitterKit
+import WebKit
 
 class AthleticsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
+//    @IBOutlet weak var webView: WKWebView!
     
     //Twitter tutorial: https://www.youtube.com/watch?v=ODTNtwnk6_E
     
@@ -26,6 +27,7 @@ class AthleticsViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         self.title = "Athletics"
 
+//        webView.loadHTMLString("<html><head><meta name='viewport' content='initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0'></head><body><a class='twitter-timeline' href='https://twitter.com/CherryCreekSN?ref_src=twsrc%5Etfw'>Tweets by CherryCreekSN</a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script></body></html>", baseURL: nil)
         // Do any additional setup after loading the view.
     }
     override func viewWillDisappear(_ animated: Bool) {

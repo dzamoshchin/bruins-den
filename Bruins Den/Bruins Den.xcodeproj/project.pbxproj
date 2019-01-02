@@ -186,6 +186,7 @@
 		2F0729D421D9AF3600D92AEB /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				475540291F21082000B028A0 /* EventViewController.swift */,
 				47808BDF1EFECDC500B68258 /* EventTableViewCell.swift */,
 				47B0D9E31EF4414E00549555 /* EventDate.swift */,
 				47B0D9E51EF4421700549555 /* Event.swift */,
@@ -209,6 +210,7 @@
 		2F3B342021AB393300502FC4 /* Links */ = {
 			isa = PBXGroup;
 			children = (
+				47C9142A1F268EA9003D5313 /* SenateViewController.swift */,
 				2F3B342121AB3AE300502FC4 /* MyCherryCreekViewController.swift */,
 				47F2D1D31F1FA8B4000BE32E /* USJViewController.swift */,
 				47143B721F06C0F20055061C /* PowerschoolViewController.swift */,
@@ -335,8 +337,6 @@
 				474113251F5BA6BD008599B9 /* Campus Maps */,
 				479470851F33C474003E05DE /* InitialViewController.swift */,
 				471A54741F26A8B400AB21FE /* Bell Schedule */,
-				47C9142A1F268EA9003D5313 /* SenateViewController.swift */,
-				475540291F21082000B028A0 /* EventViewController.swift */,
 				2F3B342021AB393300502FC4 /* Links */,
 				47F55E261F253DA9001F8695 /* Important Documents */,
 				473169121F32452100E36B1A /* Announcements */,
