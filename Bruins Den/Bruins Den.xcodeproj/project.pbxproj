@@ -201,6 +201,9 @@
 		2F0729DD21DB086F00D92AEB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				47C805CA1F89979600468A9E /* NamesTableViewCell.swift */,
+				47C805C81F89976D00468A9E /* AboutAppViewController.swift */,
+				4784C7971F2C2DB7006274FE /* ContactViewController.swift */,
 				2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */,
 				2F0729D921DB086000D92AEB /* SettingsViewController.swift */,
 			);
@@ -213,7 +216,6 @@
 				2F3B342121AB3AE300502FC4 /* MyCherryCreekViewController.swift */,
 				47F2D1D31F1FA8B4000BE32E /* USJViewController.swift */,
 				47143B721F06C0F20055061C /* PowerschoolViewController.swift */,
-				47F55E261F253DA9001F8695 /* Important Documents */,
 			);
 			name = Links;
 			sourceTree = "<group>";
@@ -333,16 +335,14 @@
 				4755D0AF1F0C0A31005D394B /* Faculty/Staff */,
 				47CC4EA91EBAA29100510F77 /* ViewController.swift */,
 				47CC4EAB1EBAA29100510F77 /* Main.storyboard */,
-				47C805CA1F89979600468A9E /* NamesTableViewCell.swift */,
-				47C805C81F89976D00468A9E /* AboutAppViewController.swift */,
 				4762368F1F80579E0016A981 /* CustomNavigationBar.swift */,
 				474113251F5BA6BD008599B9 /* Campus Maps */,
 				479470851F33C474003E05DE /* InitialViewController.swift */,
-				4784C7971F2C2DB7006274FE /* ContactViewController.swift */,
 				471A54741F26A8B400AB21FE /* Bell Schedule */,
 				47C9142A1F268EA9003D5313 /* SenateViewController.swift */,
 				475540291F21082000B028A0 /* EventViewController.swift */,
 				2F3B342021AB393300502FC4 /* Links */,
+				47F55E261F253DA9001F8695 /* Important Documents */,
 				473169121F32452100E36B1A /* Announcements */,
 				4743BD3F1F1D2ABD00D7A6A0 /* TestViewController.swift */,
 				2F0729D421D9AF3600D92AEB /* Calendar */,

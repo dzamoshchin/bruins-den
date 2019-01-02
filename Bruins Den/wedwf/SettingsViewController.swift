@@ -50,7 +50,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.row == 0 {
             cell.name.text = "Notifications"
         } else if indexPath.row == 1 {
-            cell.name.text = "Suggestions"
+            cell.name.text = "Suggestion Box"
         } else {
             cell.name.text = "About the App"
         }

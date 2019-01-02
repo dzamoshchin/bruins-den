@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import DownPicker
+import WebKit
+//import DownPicker
 
 class ContactViewController: UIViewController {
     //implement SKPSMTPMessageDelegate
     
     //@IBOutlet weak var subjectTextField: UITextField!
-    var downPick : DownPicker!
-    @IBOutlet weak var revealButton: UIBarButtonItem!
-    
+//    var downPick : DownPicker!
     //@IBOutlet weak var message: UITextField!
     
    // @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +26,13 @@ class ContactViewController: UIViewController {
         self.navigationController!.navigationBar.setTitleVerticalPositionAdjustment(1, for: .default)
         self.navigationController?.navigationBar.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([ NSAttributedString.Key.font.rawValue: UIFont(name: "HelveticaNeue-Light", size: 25)!])
         self.title = "Suggestion Box"
-        webView.loadRequest(NSURLRequest(url: NSURL(string: "https://sites.google.com/view/cchsapp/home")! as URL) as URLRequest)
+        
+        let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSdVQc_2zDxKi-rXrqbRS0yjLgY84s7h1pFjDJlKRsomtfqSIg/viewform?embedded=true")!
+        webView.load(URLRequest(url: url))
+//        webView.allowsBackForwardNavigationGestures = true
+        
         /*
+         
         subjectTextField.rightView = UIImageView(image: #imageLiteral(resourceName: "downArrow"))
         let persons = ["Cherry Creek HS", "CCHS Bruins Den App"]
         self.downPick = DownPicker(textField: self.subjectTextField, withData:persons)
