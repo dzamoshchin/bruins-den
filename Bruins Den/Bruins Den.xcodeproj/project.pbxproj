@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F0729DB21DB086000D92AEB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0729D921DB086000D92AEB /* SettingsViewController.swift */; };
 		2F0729DC21DB086000D92AEB /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */; };
+		2F2DAEF121DDD19800F1C300 /* FinalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2DAEF021DDD19800F1C300 /* FinalsTableViewCell.swift */; };
 		2F2FFE0C219B2A1B0034F342 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D5B70E1F63904700646D95 /* GoogleService-Info.plist */; };
 		2F308CD021D4139C007CAE84 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F308CCF21D4139C007CAE84 /* FinalViewController.swift */; };
 		2F3B341C21AB2D2800502FC4 /* RegistrationGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */; };
@@ -89,6 +90,7 @@
 		2E4632EF03A24B2BE06A7A5C /* Pods-Bruins Den.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bruins Den.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bruins Den/Pods-Bruins Den.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0729D921DB086000D92AEB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2F0729DA21DB086000D92AEB /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		2F2DAEF021DDD19800F1C300 /* FinalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalsTableViewCell.swift; sourceTree = "<group>"; };
 		2F308CCF21D4139C007CAE84 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		2F3B341921AB2D2600502FC4 /* RegistrationGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RegistrationGuide.pdf; sourceTree = "<group>"; };
 		2F3B341A21AB2D2700502FC4 /* BearFacts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BearFacts.pdf; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				47C9142C1F2693D5003D5313 /* ScheduleTableViewCell.swift */,
 				47903F921F04134F003FD5C2 /* ScheduleViewController.swift */,
 				2F308CCF21D4139C007CAE84 /* FinalViewController.swift */,
+				2F2DAEF021DDD19800F1C300 /* FinalsTableViewCell.swift */,
 			);
 			name = "Bell Schedule";
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				474113221F5B9F18008599B9 /* MapsViewController.swift in Sources */,
 				4796B6471F8198EC00C53A52 /* ChannelViewController.swift in Sources */,
 				4755D0B91F0C0B52005D394B /* TeachersViewController.swift in Sources */,
+				2F2DAEF121DDD19800F1C300 /* FinalsTableViewCell.swift in Sources */,
 				47FBCF661EF1CD4A00404953 /* Menu2CollectionViewCell.swift in Sources */,
 				7A7F6B001F34E1FA006022B6 /* ClubProfileViewController.swift in Sources */,
 				47FBCF671EF1CD4A00404953 /* MenuCollectionViewCell.swift in Sources */,

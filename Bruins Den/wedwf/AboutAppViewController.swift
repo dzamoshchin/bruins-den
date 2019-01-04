@@ -30,11 +30,6 @@ class AboutAppViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        print(UIScreen.main.bounds.width)
-        height.constant += contentView.frame.height - UIScreen.main.bounds.width
-
-        contentView.layoutIfNeeded()
-        contentView.updateConstraints()
     }
 
     override func didReceiveMemoryWarning() {
