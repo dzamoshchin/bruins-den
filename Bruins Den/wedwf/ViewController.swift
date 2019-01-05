@@ -133,8 +133,8 @@ class ViewController: UIViewController {
         
         //FIX THIS: height is too much
         if #available(iOS 11.0, *) {
-            var t = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height: 200))
-            let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height: 100))
+            var t = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.size.width, height: 200))
+            let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width, height: 100))
             label.text = "Cherry Creek"
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 2
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
             label.textAlignment = .center
             label.textColor = UIColor.white
             label.sizeToFit()
-            let label2 = UILabel(frame: CGRect(x:0, y:label.frame.size.height, width:self.view.frame.size.width/2, height: 100))
+            let label2 = UILabel(frame: CGRect(x:0, y:label.frame.size.height, width:self.view.frame.size.width, height: 100))
             label2.text = "High School"
             label2.backgroundColor = UIColor.clear
             label2.numberOfLines = 2
@@ -162,7 +162,7 @@ class ViewController: UIViewController {
             print("laj11")
         } else {
             print("old")
-            let label = UILabel(frame: CGRect(x:0, y:100, width:self.view.frame.size.width/2, height: 200))
+            let label = UILabel(frame: CGRect(x:0, y:100, width:self.view.frame.size.width, height: 200))
             label.text = "Cherry Creek\nHigh School"
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 2

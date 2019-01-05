@@ -1485,7 +1485,7 @@
                                             <constraint firstItem="phD-Pp-x1a" firstAttribute="leading" secondItem="SeC-uI-FdC" secondAttribute="leading" constant="35" id="RGJ-Jd-nI8"/>
                                             <constraint firstItem="yvv-6V-jCI" firstAttribute="leading" secondItem="SeC-uI-FdC" secondAttribute="leading" constant="20" id="USP-hK-YN3"/>
                                             <constraint firstAttribute="trailing" secondItem="yvv-6V-jCI" secondAttribute="trailing" constant="20" id="YIb-P5-FiS"/>
-                                            <constraint firstAttribute="bottom" secondItem="yvv-6V-jCI" secondAttribute="bottom" constant="40" id="fPb-PX-0BD"/>
+                                            <constraint firstAttribute="bottom" secondItem="yvv-6V-jCI" secondAttribute="bottom" constant="40" id="mch-ZU-wqw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2410,7 +2410,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-TM-f1x">
-                                <rect key="frame" x="60" y="20" width="294" height="29"/>
+                                <rect key="frame" x="20" y="20" width="374" height="29"/>
                                 <segments>
                                     <segment title="First Semester"/>
                                     <segment title="Second Semester"/>
@@ -2430,7 +2430,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:55-12:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mY3-68-xEd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:55-12:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY3-68-xEd">
                                                     <rect key="frame" x="20" y="11" width="118" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -2477,8 +2477,8 @@
                             <constraint firstAttribute="bottom" secondItem="9N1-Dg-1ys" secondAttribute="bottom" constant="30" id="Dwb-O7-BVE"/>
                             <constraint firstItem="YCQ-TM-f1x" firstAttribute="top" secondItem="i9c-A7-7yB" secondAttribute="bottom" constant="20" id="JAe-UT-eWg"/>
                             <constraint firstAttribute="trailing" secondItem="9N1-Dg-1ys" secondAttribute="trailing" constant="10" id="Qro-7R-78s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YCQ-TM-f1x" secondAttribute="trailing" constant="40" id="bmp-Zb-WEv"/>
-                            <constraint firstItem="YCQ-TM-f1x" firstAttribute="leading" secondItem="LJ8-c8-9Ny" secondAttribute="leadingMargin" constant="40" id="iKm-3J-LkN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YCQ-TM-f1x" secondAttribute="trailing" id="bmp-Zb-WEv"/>
+                            <constraint firstItem="YCQ-TM-f1x" firstAttribute="leading" secondItem="LJ8-c8-9Ny" secondAttribute="leadingMargin" id="iKm-3J-LkN"/>
                             <constraint firstItem="9N1-Dg-1ys" firstAttribute="top" secondItem="YCQ-TM-f1x" secondAttribute="bottom" constant="20" id="n0h-jP-4FI"/>
                         </constraints>
                     </view>
