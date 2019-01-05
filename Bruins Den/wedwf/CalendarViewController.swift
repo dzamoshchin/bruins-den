@@ -56,45 +56,48 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         thisDate.month = month
         thisDate.day = day
         loadEvents()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
 
-        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
-            let today = Date()
-            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
-                var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-
-                loadingIndicator.center = self.view.center;
-                loadingIndicator.hidesWhenStopped = true
-                loadingIndicator.style = UIActivityIndicatorView.Style.gray
-                loadingIndicator.startAnimating();
-
-                alert.setValue(loadingIndicator, forKey: "accessoryView")
-                loadingIndicator.startAnimating()
-
-                alert.show();
-
-               parseRSS()
-            } else {
-                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
-
-                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
-                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
-            }
-        } else {
-            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-
-            loadingIndicator.center = self.view.center;
-            loadingIndicator.hidesWhenStopped = true
-            loadingIndicator.style = UIActivityIndicatorView.Style.gray
-            loadingIndicator.startAnimating();
-
-            alert.setValue(loadingIndicator, forKey: "accessoryView")
-            loadingIndicator.startAnimating()
-
-            alert.show();
-
-            parseRSS()
-        }
-
+//        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
+//            let today = Date()
+//            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
+//                var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+//
+//                loadingIndicator.center = self.view.center;
+//                loadingIndicator.hidesWhenStopped = true
+//                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+//                loadingIndicator.startAnimating();
+//
+//                alert.setValue(loadingIndicator, forKey: "accessoryView")
+//                loadingIndicator.startAnimating()
+//
+//                alert.show();
+//
+//               parseRSS()
+//            } else {
+//                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
+//
+//                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
+//                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
+//            }
+//        } else {
+//            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+//
+//            loadingIndicator.center = self.view.center;
+//            loadingIndicator.hidesWhenStopped = true
+//            loadingIndicator.style = UIActivityIndicatorView.Style.gray
+//            loadingIndicator.startAnimating();
+//
+//            alert.setValue(loadingIndicator, forKey: "accessoryView")
+//            loadingIndicator.startAnimating()
+//
+//            alert.show();
+//
+//            parseRSS()
+//        }
+        parseRSS()
+        calendar.reloadData()
         // Do any additional setup after loading the view.
     }
 
