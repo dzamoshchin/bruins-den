@@ -59,46 +59,43 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
 
-//        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
-//            let today = Date()
-//            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
-//                var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-//
-//                loadingIndicator.center = self.view.center;
-//                loadingIndicator.hidesWhenStopped = true
-//                loadingIndicator.style = UIActivityIndicatorView.Style.gray
-//                loadingIndicator.startAnimating();
-//
-//                alert.setValue(loadingIndicator, forKey: "accessoryView")
-//                loadingIndicator.startAnimating()
-//
-//                alert.show();
-//
-//               parseRSS()
-//            } else {
-//                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
-//
-//                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
-//                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
-//            }
-//        } else {
-//            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-//
-//            loadingIndicator.center = self.view.center;
-//            loadingIndicator.hidesWhenStopped = true
-//            loadingIndicator.style = UIActivityIndicatorView.Style.gray
-//            loadingIndicator.startAnimating();
-//
-//            alert.setValue(loadingIndicator, forKey: "accessoryView")
-//            loadingIndicator.startAnimating()
-//
-//            alert.show();
-//
-//            parseRSS()
-//        }
-        parseRSS()
-        calendar.reloadData()
-        // Do any additional setup after loading the view.
+        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
+            let today = Date()
+            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
+                var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+
+                loadingIndicator.center = self.view.center;
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+                loadingIndicator.startAnimating();
+
+                alert.setValue(loadingIndicator, forKey: "accessoryView")
+                loadingIndicator.startAnimating()
+
+                alert.show();
+
+               parseRSS()
+            } else {
+                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
+
+                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
+                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
+            }
+        } else {
+            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+
+            loadingIndicator.center = self.view.center;
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.style = UIActivityIndicatorView.Style.gray
+            loadingIndicator.startAnimating();
+
+            alert.setValue(loadingIndicator, forKey: "accessoryView")
+            loadingIndicator.startAnimating()
+
+            alert.show();
+
+            parseRSS()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -249,72 +246,76 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     func parseRSS() {
         let feedURL = URL(string: "http://cherrycreek.cherrycreekschools.org/_layouts/15/listfeed.aspx?List=%7B9CE5158B-4A2D-4B34-B16E-1B1FD2A169B7%7D&Source=http%3A%2F%2Fcherrycreek%2Echerrycreekschools%2Eorg%2FLists%2FSchoolEvents%2Fcalendar%2Easpx")!
         let parser = FeedParser(URL: feedURL)
-        parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
-            // Do your thing, then back to the Main thread
-            guard let feed = result.rssFeed, result.isSuccess else {
-                print(result.error as Any)
-                return
-            }
+        let result = parser.parse()
+
+        // Do your thing, then back to the Main thread
+        guard let feed = result.rssFeed, result.isSuccess else {
+            print(result.error as Any)
+            return
+        }
+        
+        print("This happens")
+        
+        for item in feed.items! {
+            print("Strange happenings")
+            var start = ""
+            var end = ""
             
-            for item in feed.items! {
-                var start = ""
-                var end = ""
-                
-                let str = item.description!
-                if let index = str.index(of: "<div><b>Start Time:</b> ") {
-                    let removeLocation = String(str[index...])
-                    if let startTimeEnd = removeLocation.index(of: "</div") {
-                        //Extracting Start Time from HTML
-                        var isolateStart = String(removeLocation[..<startTimeEnd])
-                        isolateStart = isolateStart.replacingOccurrences(of: "<div><b>Start Time:</b> ", with: "")
-                        start = isolateStart.trimmingCharacters(in: .newlines)
-                        
-                        //Extracting End Time from HTML
-                        let rest = String(removeLocation[removeLocation.index(startTimeEnd, offsetBy: 6)...])
-                        if let endTimeEnd = rest.index(of: "</div") {
-                            var isolateEnd = String(rest[..<endTimeEnd])
-                            isolateEnd = isolateEnd.replacingOccurrences(of: "<div><b>End Time:</b> ", with: "")
-                            end = isolateEnd.trimmingCharacters(in: .newlines)
-                        }
+            let str = item.description!
+            if let index = str.index(of: "<div><b>Start Time:</b> ") {
+                let removeLocation = String(str[index...])
+                if let startTimeEnd = removeLocation.index(of: "</div") {
+                    //Extracting Start Time from HTML
+                    var isolateStart = String(removeLocation[..<startTimeEnd])
+                    isolateStart = isolateStart.replacingOccurrences(of: "<div><b>Start Time:</b> ", with: "")
+                    start = isolateStart.trimmingCharacters(in: .newlines)
+                    
+                    //Extracting End Time from HTML
+                    let rest = String(removeLocation[removeLocation.index(startTimeEnd, offsetBy: 6)...])
+                    if let endTimeEnd = rest.index(of: "</div") {
+                        var isolateEnd = String(rest[..<endTimeEnd])
+                        isolateEnd = isolateEnd.replacingOccurrences(of: "<div><b>End Time:</b> ", with: "")
+                        end = isolateEnd.trimmingCharacters(in: .newlines)
                     }
                 }
-                
-                var datecomp = DateComponents()
-                print(start)
-                print(end)
-                print("before it crashes")
-                self.parseDateTime(str: start, d: &datecomp, start: &start)
-                
-                let eventTitle = item.title!
-                print("Start: " + start)
-                print("End: " + end)
-
-                //Create the event
-                let event = Event(eventTitle, "", start)
-                event.endTime = end
-                event.startDate = datecomp
-                let eventDate = EventDate(datecomp)
-                if self.events.contains(eventDate) {
-                    self.events[self.events.firstIndex(of: eventDate)!].event.append(event)
-                } else {
-                    eventDate.event.append(event)
-                    self.events.append(eventDate)
-                }
-
             }
             
-            self.addMultiEvents()
-            self.loadDatesWithEvents()
-            self.sortEvents()
-            self.calendar.reloadData()
+            var datecomp = DateComponents()
+            print(start)
+            print(end)
+            print("before it crashes")
+            self.parseDateTime(str: start, d: &datecomp, start: &start)
             
-//            UserDefaults.standard.set(self.datesWithEvent, forKey: "dates")
-//            let currentDate = Date()
-//            UserDefaults.standard.set(currentDate, forKey: "lastLoad")
-//            let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.events)
-//            UserDefaults.standard.set(encodedData, forKey: "events")
-            self.alert.dismiss(withClickedButtonIndex: -1, animated: true)
+            let eventTitle = item.title!
+            print("Start: " + start)
+            print("End: " + end)
+
+            //Create the event
+            let event = Event(eventTitle, "", start)
+            event.endTime = end
+            event.startDate = datecomp
+            let eventDate = EventDate(datecomp)
+            if self.events.contains(eventDate) {
+                self.events[self.events.firstIndex(of: eventDate)!].event.append(event)
+            } else {
+                eventDate.event.append(event)
+                self.events.append(eventDate)
+            }
         }
+            
+        print("after this")
+        
+        self.addMultiEvents()
+        self.loadDatesWithEvents()
+        self.sortEvents()
+        self.calendar.reloadData()
+        
+        UserDefaults.standard.set(self.datesWithEvent, forKey: "dates")
+        let currentDate = Date()
+        UserDefaults.standard.set(currentDate, forKey: "lastLoad")
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.events)
+        UserDefaults.standard.set(encodedData, forKey: "events")
+        self.alert.dismiss(withClickedButtonIndex: -1, animated: true)
     }
 
     //str: "mm/dd/yyyy 88:88 AM"
