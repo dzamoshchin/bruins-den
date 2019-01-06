@@ -22,7 +22,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
 
     let cellReuseIdentifier = "cell"
 
-    var alert: UIAlertView = UIAlertView(title: "Loading...", message: "Please wait. The calendar is only loaded every other week.", delegate: nil, cancelButtonTitle: "Cancel")
+    let alert: UIAlertView = UIAlertView(title: "Loading...", message: "Please wait. The calendar is only loaded every other week.", delegate: nil, cancelButtonTitle: "Cancel")
 
     var datesWithEvent = [String]()
     fileprivate lazy var dateFormatter2: DateFormatter = {
@@ -62,7 +62,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
             let today = Date()
             if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
-                var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+                let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
 
                 loadingIndicator.center = self.view.center;
                 loadingIndicator.hidesWhenStopped = true
@@ -82,7 +82,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
                 self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
             }
         } else {
-            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+            let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
 
             loadingIndicator.center = self.view.center;
             loadingIndicator.hidesWhenStopped = true
