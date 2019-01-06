@@ -63,6 +63,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.viewWillLayoutSubviews()
         navigationController?.view.backgroundColor = UIColor.clear
         print("Departments \(departments.count)")
         let verticalOffset = 0
@@ -79,27 +80,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        //HAMBURGER ICON
-//        let image = #imageLiteral(resourceName: "menu")
-//        let fr = CGRect(x: 0, y: 0, width: 30, height: 30)
-//        let barButton = BadgedBarButtonItem(
-//            startingBadgeValue: 1,
-//            frame: fr,
-//            image: image
-//        )
-//        barButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-        
-        /*let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        backButton.setBackgroundImage(UIImage(named: "menu"), for: .normal)
-        backButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControlEvents.touchUpInside) */
-        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-//        barButton.badgeValue = 0
-//
-//        self.navigationItem.leftBarButtonItem = barButton
-//        self.navigationItem.leftBarButtonItem?.isEnabled = true
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-//
-        
+
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.mainViewController = self.navigationController
         
@@ -117,80 +98,16 @@ class ViewController: UIViewController {
             imageViews.append(subview)
             
             self.scrollView.addSubview(subview)
-            
         }
-        
-        //TITLE OF APP (CHERRY CREEK HIGH SCHOOL)
-        /*let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height: 200))
-        label.text = "Cherry Creek\nHigh School"
-        label.backgroundColor = UIColor.clear
-        label.numberOfLines = 2
-        label.font = UIFont(name: "Helvetica Neue", size: 28)
-        label.textAlignment = .center
-        label.textColor = UIColor.white
-        label.sizeToFit() */
-        //self.automaticallyAdjustsScrollViewInsets = false
-        
-        //FIX THIS: height is too much
-        if #available(iOS 11.0, *) {
-            var t = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.size.width, height: 200))
-            let label = UILabel(frame: CGRect(x:0, y:0, width:self.view.frame.size.width, height: 100))
-            label.text = "Cherry Creek"
-            label.backgroundColor = UIColor.clear
-            label.numberOfLines = 2
-            label.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
-            label.textAlignment = .center
-            label.textColor = UIColor.white
-            label.sizeToFit()
-            let label2 = UILabel(frame: CGRect(x:0, y:label.frame.size.height, width:self.view.frame.size.width, height: 100))
-            label2.text = "High School"
-            label2.backgroundColor = UIColor.clear
-            label2.numberOfLines = 2
-            label2.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
-            label2.textAlignment = .center
-            label2.textColor = UIColor.white
-
-            label2.sizeToFit()
-            label.center.x = t.center.x
-            label2.center.x = t.center.x
-            t.addSubview(label)
-            t.addSubview(label2)
-            self.navigationItem.titleView = t
-            self.navigationItem.titleView?.sizeToFit()
-            //self.navigationController?.navigationBar.topItem?.titleView = label
-            height = (self.navigationController?.navigationBar.frame.height)!
-            print("laj11")
-        } else {
-            print("old")
-            let label = UILabel(frame: CGRect(x:0, y:100, width:self.view.frame.size.width, height: 200))
-            label.text = "Cherry Creek\nHigh School"
-            label.backgroundColor = UIColor.clear
-            label.numberOfLines = 2
-            label.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
-            label.textAlignment = .center
-            label.textColor = UIColor.white
-            print("laj")
-            label.sizeToFit()
-            self.navigationItem.titleView = label
-        }
-       
-        
-        //label.addSubview(test)
-        //
-        //self.navigationController?.navigationBar.addSubview(label)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
-        self.navigationItem.titleView?.sizeToFit()
-        let b = navigationItem.titleView?.frame
-        self.navigationItem.titleView?.frame = CGRect(x: (b?.origin.x)!, y: (b?.origin.y)!, width: (b?.size.width)!, height: 200)
-        let bar = navigationController?.navigationBar
-        bar?.setNeedsLayout()
-        bar?.layoutIfNeeded()
-        bar?.setNeedsDisplay()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -216,17 +133,6 @@ class ViewController: UIViewController {
         }
     }
   
-    func addLine(_ start: CGPoint, _ end:CGPoint) {
-        let line = CAShapeLayer()
-        let linePath = UIBezierPath()
-        linePath.move(to: start)
-        linePath.addLine(to: end)
-        line.path = linePath.cgPath
-        line.strokeColor = UIColor.white.cgColor
-        line.lineWidth = 1
-        line.lineJoin = CAShapeLayerLineJoin.round
-        self.view.layer.addSublayer(line)
-    }
 }
 
 // Helper function inserted by Swift 4.2 migrator.

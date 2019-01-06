@@ -41,7 +41,7 @@ class PowerschoolViewController: UIViewController, WKNavigationDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isTranslucent = true        
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
 

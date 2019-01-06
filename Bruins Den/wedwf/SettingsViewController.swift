@@ -26,7 +26,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isTranslucent = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
