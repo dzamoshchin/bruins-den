@@ -11,7 +11,8 @@ It improves on the usability, appearance, and functionality of the previous vers
 - [x] Remove side menu
 - [x] Update faculty images
 - [x] Add new sliding images
-- [ ] Fix master calendar
+- [x] Fix master calendar
+- [ ] Reduce the size of the app (compress images, etc.)
 
 ## This project is maintained by:
 * Daniel Zamoshchin
