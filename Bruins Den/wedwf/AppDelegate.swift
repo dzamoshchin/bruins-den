@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import TwitterKit
 import UserNotifications
+import FirebaseInstanceID
+import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -36,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
           application.registerUserNotificationSettings(settings)
         }
 
-application.registerForRemoteNotifications()
+        application.registerForRemoteNotifications()
         
         TWTRTwitter.sharedInstance().start(withConsumerKey:"7IXEpM3QcOQdfS9e9GeMPCHYP", consumerSecret:"9bo3cIwn9VkM6UovUt50bttFiP0nkxZs8rW4rFvtSpDEKTeAdO")
         return true

@@ -11,7 +11,7 @@ target 'Bruins Den' do
   pod 'Firebase/Database'
   pod ‘Firebase/Storage’
   #pod ‘FirebaseUI/Storage’
-  #pod ‘Firebase/Messaging’
+  pod ‘Firebase/Messaging’
   pod 'TwitterKit'
   #pod 'Alamofire', '~> 4.4'
   #pod 'Kanna', '~> 2.1.0'
