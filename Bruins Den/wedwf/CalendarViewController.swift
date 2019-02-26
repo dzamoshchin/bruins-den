@@ -59,29 +59,29 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
 
-        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
-            let today = Date()
-            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
-                let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-
-                loadingIndicator.center = self.view.center;
-                loadingIndicator.hidesWhenStopped = true
-                loadingIndicator.style = UIActivityIndicatorView.Style.gray
-                loadingIndicator.startAnimating();
-
-                alert.setValue(loadingIndicator, forKey: "accessoryView")
-                loadingIndicator.startAnimating()
-
-                alert.show();
-
-               parseRSS()
-            } else {
-                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
-
-                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
-                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
-            }
-        } else {
+//        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
+//            let today = Date()
+//            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
+//                let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+//
+//                loadingIndicator.center = self.view.center;
+//                loadingIndicator.hidesWhenStopped = true
+//                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+//                loadingIndicator.startAnimating();
+//
+//                alert.setValue(loadingIndicator, forKey: "accessoryView")
+//                loadingIndicator.startAnimating()
+//
+//                alert.show();
+//
+//               parseRSS()
+//            } else {
+//                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
+//
+//                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
+//                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
+//            }
+//        } else {
             let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
 
             loadingIndicator.center = self.view.center;
@@ -95,7 +95,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             alert.show();
 
             parseRSS()
-        }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -257,7 +257,6 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         print("This happens")
         
         for item in feed.items! {
-            print("Strange happenings")
             var start = ""
             var end = ""
             
@@ -281,15 +280,22 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             }
             
             var datecomp = DateComponents()
-            print(start)
-            print(end)
-            print("before it crashes")
-            self.parseDateTime(str: start, d: &datecomp, start: &start)
             
             let eventTitle = item.title!
-            print("Start: " + start)
-            print("End: " + end)
-
+            if (start.contains("5:00 PM") && end.contains("4:59 PM")) {
+                start = start.replacingOccurrences(of: "5:00 PM", with: "12:00 AM")
+                end = end.replacingOccurrences(of: "4:59", with: "11:59")
+                self.parseDateTime(str: start, d: &datecomp, start: &start)
+                datecomp = incrementDate(d: datecomp)
+            } else if (start.contains("6:00 PM") && end.contains("5:59 PM")) {
+                start = start.replacingOccurrences(of: "6:00 PM", with: "12:00 AM")
+                end = end.replacingOccurrences(of: "5:59", with: "11:59")
+                self.parseDateTime(str: start, d: &datecomp, start: &start)
+                datecomp = incrementDate(d: datecomp)
+            } else {
+                self.parseDateTime(str: start, d: &datecomp, start: &start)
+            }
+            
             //Create the event
             let event = Event(eventTitle, "", start)
             event.endTime = end

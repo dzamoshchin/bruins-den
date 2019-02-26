@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 import Firebase
 
 class DepartmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -22,7 +23,19 @@ class DepartmentViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: Private Methods
     
     private func loadDepartments() {
+        let db = Firestore.firestore()
         
+        db.collection("Departments").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("mkay")
+                    print(document.documentID)
+                }
+            }
+        }
+            
         // reference to database at the department branch
         let ref = Database.database().reference(withPath: "Faculty/Department")
         
