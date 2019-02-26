@@ -59,29 +59,29 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
 
-//        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
-//            let today = Date()
-//            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
-//                let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
-//
-//                loadingIndicator.center = self.view.center;
-//                loadingIndicator.hidesWhenStopped = true
-//                loadingIndicator.style = UIActivityIndicatorView.Style.gray
-//                loadingIndicator.startAnimating();
-//
-//                alert.setValue(loadingIndicator, forKey: "accessoryView")
-//                loadingIndicator.startAnimating()
-//
-//                alert.show();
-//
-//               parseRSS()
-//            } else {
-//                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
-//
-//                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
-//                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
-//            }
-//        } else {
+        if let lastLoaded = UserDefaults.standard.object(forKey: "lastLoad") {
+            let today = Date()
+            if daysBetween(date1: lastLoaded as! Date, date2: today)>=14 {
+                let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
+
+                loadingIndicator.center = self.view.center;
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+                loadingIndicator.startAnimating();
+
+                alert.setValue(loadingIndicator, forKey: "accessoryView")
+                loadingIndicator.startAnimating()
+
+                alert.show();
+
+               parseRSS()
+            } else {
+                let decoded = UserDefaults.standard.object(forKey: "events") as! Data
+
+                self.events = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [EventDate]
+                self.datesWithEvent = UserDefaults.standard.object(forKey: "dates") as! [String]
+            }
+        } else {
             let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 50, y: 10, width: 37, height: 37)) as UIActivityIndicatorView
 
             loadingIndicator.center = self.view.center;
@@ -95,7 +95,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             alert.show();
 
             parseRSS()
-//        }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -282,6 +282,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             var datecomp = DateComponents()
             
             let eventTitle = item.title!
+            //Hard-coded time change -- this is bad code
             if (start.contains("5:00 PM") && end.contains("4:59 PM")) {
                 start = start.replacingOccurrences(of: "5:00 PM", with: "12:00 AM")
                 end = end.replacingOccurrences(of: "4:59", with: "11:59")
