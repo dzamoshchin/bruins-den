@@ -17,4 +17,3 @@ It improves on the usability, appearance, and functionality of the previous vers
 ## This project is maintained by:
 * Daniel Zamoshchin
 * Siddarth Ijju
-* Krithik Ramesh
